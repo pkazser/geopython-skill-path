@@ -27,7 +27,7 @@
 Το `data/gp01/survey_points.csv` περιέχει σημεία επιτόπιας παρατήρησης στην περιοχή των Σερρών, με όνομα, κατηγορία, συντεταγμένες, υψόμετρο και κατάσταση ελέγχου.
 Οι συντεταγμένες είναι σε **EPSG:4326**.
 
-## Άνοιξε το notebook στο Google Colab
+## Πρακτική άσκηση στο Colab
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pkazser/geopython-skill-path/blob/main/notebooks/starter/gp01_first_geopython_workflow_starter.ipynb)
 
@@ -42,3 +42,7 @@
 - Είναι οι τιμές λογικές;
 - Ποια εγγραφή θέλω να κρατήσω;
 - Πώς θα ελέγξω και θα αποθηκεύσω το αποτέλεσμα;
+
+## Ενδεικτική λύση
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pkazser/geopython-skill-path/blob/main/notebooks/solution/gp01_first_geopython_workflow_solution.ipynb)
