@@ -28,6 +28,8 @@ areas_m = areas.to_crs("EPSG:2100")
 
 Ποια μέτρηση θα έκανες σε EPSG:4326; Καμία από τις τρεις χωρίς ειδική γεωδαιτική μέθοδο.
 
+Point features συνήθως δεν έχουν meaningful area/length· LineString features έχουν length, ενώ Polygon features έχουν area και perimeter. Το αποτέλεσμα εξαρτάται από το CRS: correct code + wrong CRS = wrong measurement. Πριν μετρήσεις, έλεγξε type, CRS και μονάδες.
+
 ## Επόμενο βήμα
 
 Θα υπολογίσεις μήκη γραμμών.

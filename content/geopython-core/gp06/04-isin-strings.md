@@ -25,6 +25,8 @@ review = gdf[gdf["condition"].str.contains("review", case=False, na=False)]
 
 Έλεγξε ότι κάθε `asset_type` του subset ανήκει στη λίστα και ότι η αναζήτηση δεν απέτυχε από κεφαλαία. Το `str.contains` μπορεί να χρειάζεται `na=False` όταν υπάρχουν κενές τιμές.
 
+Το `isin(["Health", "Emergency"])` είναι καθαρότερο από πολλές OR συνθήκες όταν επιλέγεις σύνολο κατηγοριών. Για strings, το `==` είναι ακριβές και case-sensitive, ενώ το `.str.contains("review", case=False, na=False)` ψάχνει τμήμα κειμένου χωρίς να αποτυγχάνει στα missing values. Έλεγξε πρώτα `unique()` ώστε να μην ψάχνεις λάθος spelling.
+
 ## Επόμενο βήμα
 
 Θα δουλέψεις με αριθμητικά ranges.

@@ -26,6 +26,8 @@ school_buffers.to_file(
 
 Τα buffers πρέπει να περιβάλλουν τις δύο σχολικές θέσεις και να έχουν ακτίνα 500 m στη σωστή κλίμακα. Αν καλύπτουν ολόκληρη την περιοχή, κάτι πήγε λάθος σε CRS ή units.
 
+Στο export κράτησε τη νέα geometry ως ξεχωριστό layer, ώστε να μην αντικαταστήσεις το αρχικό services/roads layer. Μετά το write ξαναδιάβασε το layer και έλεγξε rows, CRS, Polygon geometry και bounds. Ο χάρτης πρέπει να δείχνει buffer γύρω από το σωστό feature, λογικό μέγεθος και αναμενόμενα overlaps.
+
 ## Επόμενο βήμα
 
 Στο Mini Challenge θα ολοκληρώσεις το workflow.

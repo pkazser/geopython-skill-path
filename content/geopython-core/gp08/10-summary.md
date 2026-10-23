@@ -12,6 +12,8 @@
 
 Γράψε report με source CRS, working CRS, distance, units, rows, geometry types, bounds και export path. Πρόσθεσε μία εικόνα ή plot για οπτικό QA.
 
+Η κοινή ακολουθία ολοκληρώνεται: GP06 επιλέγει features, GP07 μετρά geometry characteristics και GP08 μοντελοποιεί proximity με νέα Polygon zones. Το buffer είναι υπόθεση απόστασης, όχι αυτόματη απόδειξη πρόσβασης ή χρόνος διαδρομής.
+
 ## Μετάβαση
 
 Στο GP09 θα συνδέσεις διαφορετικά layers με βάση τη χωρική τους σχέση.

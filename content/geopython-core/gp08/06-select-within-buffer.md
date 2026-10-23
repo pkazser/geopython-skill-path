@@ -29,6 +29,8 @@ near_school = gpd.sjoin(
 
 Έλεγξε ότι όλα τα matched points είναι `Point`, ότι το CRS είναι ίδιο και ότι κάθε match έχει valid `service_id` και buffer ID. Μην εξισώνεις το πλήθος matches με το πλήθος μοναδικών υπηρεσιών χωρίς `nunique()`.
 
+Πρώτα διατύπωσε το ερώτημα: “ποια features βρίσκονται μέσα στη ζώνη 500 m από σχολείο;”. Μετά χρησιμοποίησε spatial relationship, όχι απλό attribute filter. Το αποτέλεσμα μπορεί να έχει λιγότερα rows και να κρατά attributes από τα selected features· έλεγξε predicate, CRS και unmatched/empty αποτέλεσμα.
+
 ## Επόμενο βήμα
 
 Θα οργανώσεις το QA και τη διάλυση buffers.

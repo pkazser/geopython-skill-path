@@ -30,6 +30,8 @@ target = gdf[gdf.status.eq("active") &
 
 Το target περιέχει F01, F02 και F06. Έλεγξε τα IDs, το min/max score και ότι όλα είναι active. Αν πάρεις διαφορετικό αποτέλεσμα, έλεγξε τα όρια και τις τιμές του CSV.
 
+Για range χρησιμοποίησε pandas σύνταξη όπως `(gdf["population"] >= 100) & (gdf["population"] <= 1000)`, όχι Python chained comparison πάνω σε Series. Το αποτέλεσμα πρέπει να ερμηνεύεται μαζί με units και missing values. Αν το range επιστρέψει μηδέν rows, έλεγξε πρώτα τα `min()` και `max()`.
+
 ## Επόμενο βήμα
 
 Θα δεις τι γίνεται όταν οι τιμές λείπουν.

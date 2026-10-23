@@ -27,6 +27,8 @@ schools = services_m.geometry.buffer(500)
 
 Το να αλλάξεις μόνο την ετικέτα CRS με `set_crs` δεν διορθώνει τις συντεταγμένες. Χρειάζεται πραγματικός μετασχηματισμός.
 
+Το σωστό workflow είναι: **inspect CRS → reproject → buffer → validate**. Σε EPSG:4326 το `buffer(500)` χρησιμοποιεί degrees, άρα δεν σημαίνει 500 m. Σε projected CRS με metre units μπορείς να ερμηνεύσεις το αποτέλεσμα ως τοπική ζώνη 500 m. Έλεγξε CRS και `total_bounds` πριν και μετά.
+
 ## Επόμενο βήμα
 
 Θα μελετήσεις πολλαπλές αποστάσεις και overlap.

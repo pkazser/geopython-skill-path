@@ -25,6 +25,8 @@ areas_m["area_ha"] = areas_m["area_m2"] / 10_000
 
 Έλεγξε `area_m2 > 0`, `geometry.is_valid.all()` και geometry type `Polygon`. Αν ένα invalid polygon δώσει περίεργο αποτέλεσμα, διόρθωσέ το με τεκμηριωμένη διαδικασία πριν τη μέτρηση.
 
+Το `geometry.area` επιστρέφει μία μέτρηση ανά polygon. Αν το CRS είναι σε metres, η μονάδα είναι m² και `area_ha = area_m2 / 10_000`, επειδή 1 ha = 10.000 m². Η geometry δεν αλλάζει· προσθέτεις attributes που περιγράφουν αυτή τη geometry.
+
 ## Επόμενο βήμα
 
 Θα υπολογίσεις απόσταση μεταξύ features.

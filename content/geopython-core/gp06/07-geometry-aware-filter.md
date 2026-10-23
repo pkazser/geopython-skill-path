@@ -28,6 +28,8 @@ inside_box = gdf.cx[23.55:23.60, 41.08:41.11]
 
 Για πραγματικό polygon-of-interest θα χρειαστείς spatial predicate όπως `within` ή `intersects`, αφού πρώτα ευθυγραμμίσεις CRS.
 
+Το attribute filter εξετάζει πεδία, ενώ η spatial επιλογή εξετάζει σχέση θέσης. Το `gdf.cx[...]` είναι ένας απλός χωρικός περιορισμός με bounding box· δεν σημαίνει ότι το feature τέμνει κάποιο συγκεκριμένο polygon. Κράτησε τη διάκριση: filtering rows με attributes δεν αλλάζει geometry ή CRS των features.
+
 ## Επόμενο βήμα
 
 Θα οργανώσεις ένα πλήρες QA μετά το filtering.

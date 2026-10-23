@@ -28,6 +28,8 @@ coverage = school_buffers.dissolve()
 
 Το dissolve δεν είναι απλώς “καθαρισμός”. Είναι αλλαγή του ερωτήματος.
 
+Τα individual buffers απαντούν “ποια ζώνη ανήκει σε ποια υπηρεσία;”. Το dissolve δημιουργεί combined coverage area και ενώνει επικαλυπτόμενες geometries. Συνήθως χάνουμε ή συνοψίζουμε attributes που ανήκαν σε κάθε individual buffer, γι’ αυτό κρατάμε και τα δύο outputs όταν χρειαζόμαστε traceability.
+
 ## Επόμενο βήμα
 
 Θα εξάγεις buffers και θα κάνεις οπτικό έλεγχο.

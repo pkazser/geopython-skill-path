@@ -20,6 +20,8 @@
 
 Κάνε plot τις layers ή άνοιξε το GeoPackage σε GIS. Τα measurements πρέπει να αντιστοιχούν στα features που βλέπεις.
 
+Επίλεξε τη σωστή measurement για κάθε geometry, δήλωσε CRS και μονάδες, υπολόγισε το αποτέλεσμα και γράψε έναν sanity check. Αν η τιμή φαίνεται περίεργη, πρώτα έλεγξε CRS και bounds, όχι μόνο τον τύπο της Python.
+
 ## Επόμενο βήμα
 
 Ολοκλήρωσε το readiness checkpoint.

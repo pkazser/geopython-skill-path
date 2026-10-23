@@ -25,6 +25,8 @@ routes_m.to_file("gp07_measurements.gpkg", layer="routes", driver="GPKG")
 
 Μην κάνεις export μόνο της στήλης μέτρησης και χάσεις τα IDs/attributes που επιτρέπουν να συνδεθεί η μέτρηση με το feature.
 
+Με το export των νέων fields η μέτρηση γίνεται μέρος του dataset και μπορεί να χρησιμοποιηθεί από άλλο GIS workflow. Μην αντικαθιστάς το source layer χωρίς λόγο: κράτησε source και measured output χωριστά ή χρησιμοποίησε σαφές νέο layer name.
+
 ## Επόμενο βήμα
 
 Στο Mini Challenge θα ολοκληρώσεις το measurement workflow.
