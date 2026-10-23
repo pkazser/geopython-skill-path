@@ -30,3 +30,5 @@ assert {"parks", "water_points"}.issubset(set(layers["name"]))
 ```
 
 Αν μπορείς να εντοπίσεις layers, να διαβάσεις το σωστό layer, να καταλάβεις το schema, να ελέγξεις CRS/geometry/bounds και να αιτιολογήσεις το filtering, είσαι έτοιμος για επόμενη χωρική ανάλυση.
+
+Η μετάβαση είναι: από το GP03 δημιουργείς GIS dataset· στο GP04 μαθαίνεις να εξερευνάς οργανωμένο multi-layer container· στο GP05 θα εξηγήσεις τι σημαίνει πραγματικά το CRS που βλέπεις σε κάθε layer.

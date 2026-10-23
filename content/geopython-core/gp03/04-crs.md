@@ -54,3 +54,5 @@ print(projected.crs)
 ```python
 assert gdf.crs.to_epsg() == 4326
 ```
+
+Το `set_crs("EPSG:4326")` θα ήταν σωστό μόνο αν οι υπάρχουσες coordinates είναι ήδη longitude/latitude. Δεν αλλάζει τις τιμές. Το `to_crs("EPSG:2100")` χρειάζεται γνωστό source CRS και αλλάζει τις coordinates. Αν δηλώσεις λάθος source CRS, κάθε επόμενος μετασχηματισμός θα είναι συνεπής αλλά χωρικά λανθασμένος.

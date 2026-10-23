@@ -54,3 +54,5 @@ assert len(assets) == len(gdf)
 assert assets.geometry.name == "geometry"
 assert assets.crs.to_epsg() == 4326
 ```
+
+Το `DataFrame` είναι πίνακας attributes. Το `GeoDataFrame` είναι πίνακας attributes με μία ενεργή geometry column και CRS metadata. Αυτά τα metadata επιτρέπουν σε GeoPandas να κάνει map, spatial operations και export. Το `points_from_xy()` παίρνει δύο Series ίδιου μήκους και επιστρέφει μία geometry ανά row· δεν ελέγχει από μόνο του αν οι αριθμοί είναι σωστοί.

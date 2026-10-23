@@ -42,3 +42,5 @@ print("Water:", water.crs, water.geometry.geom_type.unique())
 ### Checkpoint
 
 Γράψε ξεχωριστά τι αποδεικνύουν `crs`, `geom_type`, `is_valid` και `total_bounds`. Αν δύο layers έχουν διαφορετικό CRS, κάνε τεκμηριωμένο `to_crs` πριν από spatial operation.
+
+Μην κληρονομείς το CRS από το πρώτο layer που άνοιξες. Κάθε layer έχει δικό του metadata και πρέπει να ελεγχθεί πριν από spatial join, overlay ή map. Τα `Point`, `LineString`, `Polygon` και `Multi*` σημαίνουν διαφορετικές μονάδες αντικειμένων: σημεία, γραμμές, επιφάνειες ή συλλογές πολλών μερών.

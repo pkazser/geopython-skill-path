@@ -46,3 +46,5 @@ assert (parks["area_ha"] > 0).all()
 ```
 
 Αυτά τα checks αποδεικνύουν ότι το attribute είναι διαθέσιμο και θετικό, όχι ότι το polygon είναι χωρικά σωστό. Για αυτό χρειάζονται CRS, bounds, validity και map.
+
+Το schema είναι πρακτική περιγραφή του layer: field names, dtypes, ενεργή geometry column και CRS. Η geometry πληροφορία απαντά “πού και με ποιο σχήμα βρίσκεται το feature”, ενώ τα attributes απαντούν “τι γνωρίζουμε γι’ αυτό”. Ένα polygon park χωρίς αξιόπιστο `area_ha` δεν είναι έτοιμο για summary μόνο και μόνο επειδή η geometry είναι valid.

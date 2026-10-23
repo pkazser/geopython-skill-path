@@ -50,3 +50,5 @@ print(parks.head(2))
 assert len(parks) == 3
 assert parks.geometry.notna().all()
 ```
+
+Το `read_file()` περιμένει path και συγκεκριμένο layer name και επιστρέφει `GeoDataFrame`. Το ότι η ανάγνωση πέτυχε δεν σημαίνει ότι επέλεξες το σωστό layer. Σύγκρινε το όνομα με το αποτέλεσμα του `list_layers()` και κράτησε χωριστά τα `parks` και `water_points`, επειδή έχουν διαφορετικές geometry και πιθανόν διαφορετικά attributes.

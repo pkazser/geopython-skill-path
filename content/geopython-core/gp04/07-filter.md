@@ -42,3 +42,5 @@ large_parks.plot(figsize=(7, 6), color="darkgreen")
 ## Πρόσεξε
 
 Μετά από φίλτρο χρησιμοποίησε `.copy()` όταν πρόκειται να αλλάξεις ή να εξάγεις το αποτέλεσμα. Έτσι αποφεύγεις ασαφείς chained assignments.
+
+Το filtering εδώ είναι attribute filtering και συνδέεται με το GP06. Πριν γράψεις σύνθετες συνθήκες, επιθεώρησε τα πραγματικά values με `unique()` ή `value_counts()`. Μετά το filter σύγκρινε rows πριν/μετά και έλεγξε ότι κάθε result ικανοποιεί τον κανόνα. Δεν φιλτράρουμε geometry “επειδή φαίνεται κοντά” χωρίς spatial predicate.

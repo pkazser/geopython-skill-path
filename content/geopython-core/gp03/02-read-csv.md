@@ -50,3 +50,5 @@ assert {"longitude", "latitude"}.issubset(df.columns)
 ```
 
 Αν οι έλεγχοι αποτύχουν, σταματάς στο CSV στάδιο και δεν προχωράς σε GIS conversion.
+
+Το `read_csv()` περιμένει tabular input και επιστρέφει `DataFrame`, όχι geometry. Αν το delimiter είναι λάθος, μπορεί να πάρεις μία μόνο column· αν το encoding είναι λάθος, μπορεί να χαθούν ελληνικοί χαρακτήρες. Πριν από spatial conversion σύγκρινε `shape`, `columns`, `dtypes`, missing values και ένα `head()`. Αν η πρώτη γραμμή φαίνεται ως μία μεγάλη επικεφαλίδα, διόρθωσε την ανάγνωση πριν συνεχίσεις.

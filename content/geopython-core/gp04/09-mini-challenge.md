@@ -32,3 +32,5 @@ assert (active_water["status"] == "active").all()
 ```
 
 Η άσκηση ολοκληρώνεται όταν μπορείς να εξηγήσεις γιατί χρησιμοποίησες Point checks και όχι Polygon checks.
+
+Πρόσθεσε μία πρόταση readiness: ποιο layer θα επέλεγες για επόμενη ανάλυση και ποιο check σε κάνει να το εμπιστεύεσαι; Αν δεν μπορείς να αναφέρεις schema, CRS, geometry και bounds, το challenge δεν έχει ολοκληρωθεί.

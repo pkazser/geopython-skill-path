@@ -48,3 +48,5 @@ assert parks.crs == water.crs
 ### Checkpoint
 
 Πρόβλεψε ότι parks και water points πρέπει να ευθυγραμμίζονται. Αν όχι, έλεγξε πρώτα CRS και bounds πριν αλλάξεις geometry.
+
+Το `total_bounds` έχει μορφή `[minx, miny, maxx, maxy]`. Δεν είναι outline ούτε απόδειξη validity, αλλά είναι γρήγορο sanity check για λάθος περιοχή, διαφορετικές μονάδες ή απροσδόκητο outlier. Ο χάρτης προσθέτει visual QA: ελέγχουμε θέση, extent και χωρική σχέση των layers.

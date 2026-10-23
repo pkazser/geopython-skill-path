@@ -43,3 +43,5 @@ print(check.head())
 ## Checkpoint
 
 Πρόσθεσε έλεγχο ότι `check["asset_id"]` είναι μοναδικό και ότι τα bounds του `check` είναι ίδια με του `gdf`.
+
+Το GeoJSON είναι πρακτικό για ελαφρύ, portable exchange ενός ή λίγων layers, αλλά μπορεί να γίνει μεγάλο και δεν είναι container πολλών θεματικών layers. Για ένα οργανωμένο GIS workflow, το GeoPackage συνήθως κρατά πολλά layers σε ένα αρχείο και αποφεύγει τη διάσπαση σε πολλά παράλληλα αρχεία.

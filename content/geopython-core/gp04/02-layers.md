@@ -49,3 +49,5 @@ assert {"parks", "water_points"}.issubset(set(layers["name"]))
 ## Αναμενόμενο αποτέλεσμα και ερμηνεία
 
 Το `parks` είναι Polygon layer και το `water_points` Point layer. Δεν αρκεί να δεις τα ονόματα· ο geometry type είναι ήδη χρήσιμη πληροφορία για τα επόμενα QA checks.
+
+Η ανακάλυψη προηγείται του `read_file(..., layer=...)` επειδή τα layer names ανήκουν στο συγκεκριμένο container. Αν γράψεις όνομα που δεν υπάρχει, θα πάρεις error· αν διαβάσεις άλλο layer, μπορεί να πάρεις έγκυρο αλλά άσχετο αποτέλεσμα. Τα πολλά shapefiles απαιτούν πολλά αρχεία και sidecar files, ενώ το GeoPackage τα οργανώνει σε ένα container.

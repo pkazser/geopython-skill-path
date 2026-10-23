@@ -30,6 +30,8 @@ projected = gdf.to_crs(epsg=2100)
 
 Ο EPSG code περιγράφει CRS metadata, δεν αποδεικνύει ότι ο μετασχηματισμός έγινε. Σύγκρινε source/target CRS, rows, geometry types και bounds πριν θεωρήσεις επιτυχημένο το βήμα.
 
+Το EPSG είναι ένας κοινός αναγνωριστικός κωδικός, ώστε δύο αναλυτές να εννοούν το ίδιο CRS. Το `EPSG:4326` σημαίνει WGS84 geographic coordinates σε degrees, ενώ το `EPSG:2100` είναι το Greek Grid, πρακτικό για τοπικές εργασίες στην Ελλάδα σε metres. Πάντα ελέγχουμε το `gdf.crs` και τα metadata του source· δεν επιλέγουμε code μόνο επειδή είναι γνωστό.
+
 ## Επόμενο βήμα
 
 Στο επόμενο lesson θα δηλώσεις το αρχικό CRS με `set_crs`.

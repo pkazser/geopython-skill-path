@@ -47,3 +47,5 @@ assert "assets" in gpd.list_layers(gpkg_path)["name"].tolist()
 ## Πρόσεξε
 
 Μην αντικαθιστάς ένα GeoPackage χωρίς να ελέγξεις αν περιέχει άλλα layers. Το όνομα του αρχείου δεν αρκεί για να γνωρίζεις το περιεχόμενό του.
+
+Ο `driver="GPKG"` λέει στον GeoPandas ποιο format να γράψει, ενώ το `layer=` ονομάζει το layer μέσα στο container. Μετά το export χρησιμοποίησε `gpd.list_layers()` ή `gpd.read_file(..., layer="assets")` για να ελέγξεις ότι το layer υπάρχει, έχει το αναμενόμενο πλήθος, CRS, geometry type και attributes. Ένα αρχείο που δημιουργήθηκε χωρίς exception δεν είναι ακόμη επαληθευμένο output.
