@@ -55,4 +55,4 @@ print("Bounds:", gdf.total_bounds)
 
 ## Επόμενο βήμα
 
-Στο επόμενο lesson θα μετατρέψουμε τους ελέγχους σε σαφή QA checklist.
+Στο επόμενο lesson θα μετατρέψουμε τους ελέγχους σε σαφή QA checklist και θα εξηγήσουμε τι αποδεικνύει κάθε assertion.

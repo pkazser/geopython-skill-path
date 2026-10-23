@@ -33,10 +33,6 @@ assert clean["observation_id"].is_unique
 
 Μέτρα `before = len(clean)` πριν το `drop_duplicates()` και `after` μετά. Έλεγξε ότι η διαφορά ισούται με τα duplicate IDs που αποφάσισες να αφαιρέσεις.
 
-## Επόμενο βήμα
-
-Θα ελέγξουμε αν οι συντεταγμένες βρίσκονται σε λογικά όρια.
-
 ## Γιατί είναι χρήσιμο
 
 Τα διπλότυπα μπορούν να διπλασιάσουν counts, να επηρεάσουν summary statistics και να κάνουν ένα layer να φαίνεται πυκνότερο από την πραγματικότητα. Το μοναδικό ID είναι συχνά η καλύτερη άμυνα.
@@ -60,3 +56,7 @@ print(duplicates[["observation_id", "category", "elevation_m"]])
 clean = clean.drop_duplicates("observation_id", keep="first")
 assert clean["observation_id"].is_unique
 ```
+
+## Επόμενο βήμα
+
+Θα ελέγξουμε αν οι συντεταγμένες βρίσκονται σε λογικά όρια.

@@ -24,10 +24,6 @@ print(gdf.geometry.is_valid.all())
 
 Δεν «διορθώνουμε» invalid geometries χωρίς να ξέρουμε την αιτία. Στα σημεία, συνήθως επιστρέφουμε στις συντεταγμένες και διορθώνουμε την πηγή.
 
-## Επόμενο βήμα
-
-Θα ενώσουμε τα βήματα σε ένα καθαρό workflow.
-
 ## Γιατί είναι χρήσιμο
 
 Το `GeoDataFrame` είναι το σημείο όπου οι attribute τιμές συνδέονται με θέση. Ένα κενό ή invalid geometry σημαίνει ότι το feature δεν μπορεί να συμμετέχει αξιόπιστα σε χάρτη ή spatial operation.
@@ -60,3 +56,7 @@ assert gdf.geometry.notna().all()
 assert gdf.geometry.is_valid.all()
 assert gdf.geometry.geom_type.eq("Point").all()
 ```
+
+## Επόμενο βήμα
+
+Θα ενώσουμε τα βήματα σε ένα καθαρό, επαναλήψιμο workflow.

@@ -41,18 +41,17 @@ df.isna().sum()
 
 Οι τύποι επηρεάζουν άμεσα τις συγκρίσεις. Η σύγκριση κειμένου με αριθμό μπορεί να αποτύχει ή να δώσει λάθος λογική. Το ίδιο πρόβλημα θα μεταφερθεί στη δημιουργία geometry και στο filtering.
 
-## Πρακτική εκτέλεση
+## Πρακτική εκτέλεση και QA
 
 ```python
 before = df["elevation_m"].dtype
 df["elevation_m"] = pd.to_numeric(df["elevation_m"], errors="coerce")
 after = df["elevation_m"].dtype
 print("Πριν:", before, "Μετά:", after)
+print("Νέα missing:", df["elevation_m"].isna().sum())
 ```
 
-Η τιμή `not_available` γίνεται `NaN`. Δεν τη μετατρέψαμε αυθαίρετα σε μηδέν· την κάναμε ορατό πρόβλημα για το επόμενο βήμα.
-
-## QA check
+Η τιμή `not_available` γίνεται `NaN`. Δεν τη μετατρέψαμε αυθαίρετα σε μηδέν· την κάναμε ορατό πρόβλημα. Ο έλεγχος τύπου αποδεικνύει ότι οι επόμενες αριθμητικές πράξεις είναι τεχνικά δυνατές, όχι ότι οι αριθμοί είναι σωστοί.
 
 ```python
 for column in ["longitude", "latitude", "elevation_m"]:
