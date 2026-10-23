@@ -1,0 +1,55 @@
+version: 1
+
+project:
+  title: GeoPython Skill Path
+  description: Practical Python learning path for Geoinformatics
+
+  toc:
+    - file: index.md
+      title: Αρχική
+
+    - file: content/start-here/index.md
+      title: Ξεκίνα από εδώ
+
+    - file: content/geopython-core/index.md
+      title: GeoPython Core
+      children:
+        - file: content/geopython-core/gp00/index.md
+          title: GP00 — Python από το μηδέν
+          children:
+            - file: content/geopython-core/gp00/01-python-colab.md
+              title: 1. Python και Google Colab
+
+            - file: content/geopython-core/gp00/02-variables-types.md
+              title: 2. Μεταβλητές και τύποι δεδομένων
+
+            - file: content/geopython-core/gp00/03-lists-dictionaries.md
+              title: 3. Λίστες και λεξικά
+
+            - file: content/geopython-core/gp00/04-if-for.md
+              title: 4. Συνθήκες και επαναλήψεις
+
+            - file: content/geopython-core/gp00/05-functions-imports.md
+              title: 5. Συναρτήσεις και βιβλιοθήκες
+
+            - file: content/geopython-core/gp00/06-pandas.md
+              title: 6. Εισαγωγή στο pandas
+
+            - file: content/geopython-core/gp00/07-geopandas-intro.md
+              title: 7. Πρώτη επαφή με GeoPandas
+
+            - file: content/geopython-core/gp00/08-errors-ai-help.md
+              title: 8. Λάθη και βοήθεια από ΤΝ
+
+            - file: content/geopython-core/gp00/09-mini-challenge.md
+              title: 9. Mini Challenge
+
+            - file: content/geopython-core/gp00/10-summary.md
+              title: 10. Ανακεφαλαίωση
+
+site:
+  template: book-theme
+  title: GeoPython Skill Path
+
+  options:
+    folders: true

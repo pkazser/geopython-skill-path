@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / MyST
+node_modules/
+.myst/
+_build/
+_builds/
+dist/
+.cache/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
