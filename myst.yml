@@ -86,6 +86,111 @@ project:
             - file: content/geopython-core/gp01/10-summary.md
               title: 10. Ανακεφαλαίωση
 
+        - title: GP02 — Clean Geospatial Data
+          children:
+            - file: content/geopython-core/gp02/index.md
+              title: Επισκόπηση GP02
+
+            - file: content/geopython-core/gp02/01-data-problems.md
+              title: 1. Γιατί χρειάζεται καθαρισμός
+
+            - file: content/geopython-core/gp02/02-missing-values.md
+              title: 2. Missing values
+
+            - file: content/geopython-core/gp02/03-data-types.md
+              title: 3. Τύποι δεδομένων
+
+            - file: content/geopython-core/gp02/04-duplicates.md
+              title: 4. Διπλότυπα και μοναδικά IDs
+
+            - file: content/geopython-core/gp02/05-coordinates.md
+              title: 5. Έλεγχος συντεταγμένων
+
+            - file: content/geopython-core/gp02/06-geometries.md
+              title: 6. Γεωμετρίες και invalid features
+
+            - file: content/geopython-core/gp02/07-clean-workflow.md
+              title: 7. Καθαρισμός με GeoPandas
+
+            - file: content/geopython-core/gp02/08-qa.md
+              title: 8. GeoPython QA
+
+            - file: content/geopython-core/gp02/09-mini-challenge.md
+              title: 9. Mini Challenge
+
+            - file: content/geopython-core/gp02/10-summary.md
+              title: 10. Ανακεφαλαίωση
+
+        - title: GP03 — CSV to GIS Dataset
+          children:
+            - file: content/geopython-core/gp03/index.md
+              title: Επισκόπηση GP03
+
+            - file: content/geopython-core/gp03/01-csv-schema.md
+              title: 1. Από CSV σε GIS dataset
+
+            - file: content/geopython-core/gp03/02-read-csv.md
+              title: 2. Ανάγνωση και schema
+
+            - file: content/geopython-core/gp03/03-coordinates.md
+              title: 3. Συντεταγμένες και geometry
+
+            - file: content/geopython-core/gp03/04-crs.md
+              title: 4. CRS
+
+            - file: content/geopython-core/gp03/05-geodataframe.md
+              title: 5. Δημιουργία GeoDataFrame
+
+            - file: content/geopython-core/gp03/06-qa.md
+              title: 6. GeoPython QA
+
+            - file: content/geopython-core/gp03/07-geojson.md
+              title: 7. Export σε GeoJSON
+
+            - file: content/geopython-core/gp03/08-geopackage.md
+              title: 8. Export σε GeoPackage
+
+            - file: content/geopython-core/gp03/09-mini-challenge.md
+              title: 9. Mini Challenge
+
+            - file: content/geopython-core/gp03/10-summary.md
+              title: 10. Ανακεφαλαίωση
+
+        - title: GP04 — Explore GeoPackage
+          children:
+            - file: content/geopython-core/gp04/index.md
+              title: Επισκόπηση GP04
+
+            - file: content/geopython-core/gp04/01-geopackage.md
+              title: 1. Τι είναι GeoPackage
+
+            - file: content/geopython-core/gp04/02-layers.md
+              title: 2. Layers και περιεχόμενο
+
+            - file: content/geopython-core/gp04/03-read-layer.md
+              title: 3. Ανάγνωση layer
+
+            - file: content/geopython-core/gp04/04-schema.md
+              title: 4. Schema και attributes
+
+            - file: content/geopython-core/gp04/05-crs-geometry.md
+              title: 5. CRS και γεωμετρίες
+
+            - file: content/geopython-core/gp04/06-bounds-map.md
+              title: 6. Bounds και χάρτης
+
+            - file: content/geopython-core/gp04/07-filter.md
+              title: 7. Filtering layer
+
+            - file: content/geopython-core/gp04/08-qa.md
+              title: 8. GeoPython QA
+
+            - file: content/geopython-core/gp04/09-mini-challenge.md
+              title: 9. Mini Challenge
+
+            - file: content/geopython-core/gp04/10-summary.md
+              title: 10. Ανακεφαλαίωση
+
 
 site:
   template: book-theme
