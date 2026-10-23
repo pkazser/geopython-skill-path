@@ -30,6 +30,8 @@ joined_left.to_file("gp09_services_by_district.gpkg", layer="services", driver="
 
 “Ο κώδικας έτρεξε” δεν σημαίνει ότι το predicate, το CRS ή το πλήθος matches είναι σωστά.
 
+Το τελικό QA πρέπει να απαντά: ποιο ήταν το before count, πόσα rows προέκυψαν, πόσα unique source IDs υπάρχουν, πόσα unmatched matches έχουμε, αν το CRS/geometry διατηρήθηκε και αν ο χάρτης δείχνει λογική αντιστοίχιση. Ο χάρτης των unmatched points είναι ιδιαίτερα χρήσιμος, γιατί αποκαλύπτει outliers ή gaps που ένας πίνακας δεν εξηγεί.
+
 ## Επόμενο βήμα
 
 Στο Mini Challenge θα επαναλάβεις ολόκληρο το workflow.

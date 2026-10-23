@@ -26,6 +26,8 @@ overlap = gpd.overlay(landuse, protected, how="intersection")
 
 Έλεγξε ότι το output έχει μη κενές, valid Polygon/MultiPolygon geometries και θετικά areas. Το συνολικό area του overlap δεν μπορεί να ξεπερνά το clipped landuse area.
 
+Η intersection κρατά την κοινή spatial περιοχή δύο layers. Το output μπορεί να έχει νέα geometry και attributes από το input και τη mask. Το `gpd.overlay(..., how="intersection")` είναι οικογένεια spatial operations· εδώ εστιάζουμε στην τομή, όχι σε πλήρη θεωρία όλων των modes.
+
 ## Επόμενο βήμα
 
 Θα συγκρίνεις καθαρά τα τρία εργαλεία.

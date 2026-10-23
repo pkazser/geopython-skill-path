@@ -29,6 +29,8 @@ study = study.to_crs("EPSG:2100")
 
 Όλα τα layers που συμμετέχουν σε clip/overlay πρέπει να έχουν συμβατό CRS. Το `to_crs` απαιτεί σωστό αρχικό CRS.
 
+Η study area είναι mask που περιορίζει το spatial extent και συχνά μειώνει το dataset πριν από ακριβότερη ανάλυση. Πριν από clip έλεγξε ότι input και mask έχουν συμβατό CRS, valid/non-empty geometry και bounds που επικαλύπτονται. Αν δεν υπάρχει overlap, το αποτέλεσμα μπορεί να είναι κενό χωρίς να υπάρχει Python error.
+
 ## Επόμενο βήμα
 
 Θα εφαρμόσεις clip στο land-use layer.

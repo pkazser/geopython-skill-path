@@ -27,6 +27,8 @@ counts = (
 
 Μην ερμηνεύσεις missing district σαν μηδενικές υπηρεσίες. Είναι άγνωστη αντιστοίχιση και πρέπει να αναφερθεί ξεχωριστά.
 
+Το `groupby` είναι φυσική συνέχεια του spatial join: πρώτα μεταφέρεις `district_name` σε κάθε service point και μετά μετράς `groupby("district_name").size()`. Το αποτέλεσμα είναι summary table, όχι νέο spatial layer. Έλεγξε ότι το άθροισμα των matches συμφωνεί με το πλήθος των matched source features.
+
 ## Επόμενο βήμα
 
 Θα κάνεις τελικό QA, map και export.

@@ -28,6 +28,15 @@ result = gpd.sjoin(points, polygons, predicate="within", how="left")
 
 Ποιο join θα χρησιμοποιούσες αν το CSV είχε ήδη αξιόπιστο `district_id`; Attribute join.
 
+| | Attribute join | Spatial join |
+|---|---|---|
+| Βάση σύνδεσης | κοινό key/field | χωρική σχέση |
+| Geometry | συνήθως διατηρείται | συνήθως διατηρείται του left |
+| Attributes | μεταφέρονται βάσει key | μεταφέρονται βάσει predicate |
+| Παράδειγμα | `school_id` | point μέσα σε polygon |
+
+Το spatial join δεν είναι παραλλαγή του `merge()`: πρώτα πρέπει να αποφασίσεις ποια geometry σχετίζεται με ποια και με ποιο predicate.
+
 ## Επόμενο βήμα
 
 Θα εξετάσεις τις έννοιες left/right και predicate.

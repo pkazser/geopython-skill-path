@@ -20,6 +20,8 @@
 
 Σύγκρινε το area πριν και μετά. Εξήγησε γιατί το clipped layer μπορεί να έχει περισσότερη συνολική έκταση από το overlay.
 
+Πριν γράψεις κώδικα, διάλεξε operation και αιτιολόγησέ το: filter για attributes, spatial join για μεταφορά attributes, clip για περιορισμό τμήματος ή intersection για νέα κοινή geometry. Έλεγξε counts, CRS, geometry και area πριν από το export.
+
 ## Επόμενο βήμα
 
 Ολοκλήρωσε το readiness checkpoint.

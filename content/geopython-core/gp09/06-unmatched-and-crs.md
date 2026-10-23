@@ -28,6 +28,8 @@ unmatched = joined[joined["district_id"].isna()]
 
 Έλεγξε CRS, rows, null matches, geometry retention και map. Μην “διορθώνεις” το πρόβλημα με `set_crs` χωρίς τεκμηρίωση.
 
+Ένα `NaN` στο transferred attribute μπορεί να σημαίνει feature εκτός περιοχών, gap μεταξύ polygons, boundary issue, λάθος CRS, λάθος predicate ή προβληματική geometry. Δεν είναι κάθε unmatched row σφάλμα. Έλεγξε πρώτα κοινό CRS, bounds, validity και χάρτη και μετά αποφάσισε αν χρειάζεται αλλαγή predicate ή διόρθωση δεδομένων.
+
 ## Επόμενο βήμα
 
 Θα συγκεντρώσεις τα joined points ανά district.

@@ -28,6 +28,8 @@ clipped = gpd.clip(landuse, study_area)
 
 Το clip αλλάζει geometry. Αν θέλεις μόνο να προσθέσεις το όνομα της περιοχής, χρειάζεσαι spatial join.
 
+Το clip απαντά «ποιο τμήμα του input βρίσκεται μέσα στη mask;». Σε Points κρατά ή απορρίπτει σημεία, σε Lines μπορεί να κόψει τη γραμμή στο boundary και σε Polygons μπορεί να κόψει το polygon. Άρα το clip μπορεί να αλλάξει geometry, σε αντίθεση με ένα απλό attribute filter.
+
 ## Επόμενο βήμα
 
 Θα δεις πώς η intersection αποτελεί overlay operation.

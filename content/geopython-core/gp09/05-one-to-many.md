@@ -28,6 +28,8 @@ joined.groupby("service_id").size()
 
 Πότε θα κρατούσες one-to-many; Όταν θέλεις να καταγράψεις όλες τις περιοχές που τέμνει ένα feature.
 
+Ένα point μέσα σε ένα polygon συνήθως δίνει μία αντιστοίχιση. Ένα line ή polygon που intersects πολλά polygons μπορεί να εμφανιστεί πολλές φορές. Άρα αύξηση rows μετά το join δεν σημαίνει αυτόματα duplicate error: μέτρα `len(joined)`, `joined[source_id].nunique()` και matches ανά source feature πριν αποφασίσεις.
+
 ## Επόμενο βήμα
 
 Θα χειριστείς unmatched features και CRS compatibility.

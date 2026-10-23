@@ -24,6 +24,8 @@ gpd.sjoin(services, districts, how="left", predicate="within")
 
 Έλεγξε matched IDs σε map. Αν όλα είναι unmatched, έλεγξε CRS, σειρά datasets και αν τα points πέφτουν πραγματικά μέσα στα polygons.
 
+Στη συνηθισμένη περίπτωση `points = left` και `polygons = right`: κρατάμε τη geometry των points και μεταφέρουμε από τα polygons πεδία όπως `zone_name`. Το `within` ρωτά αν κάθε left point βρίσκεται μέσα σε right polygon. Το αντίστροφο ερώτημα είναι `polygon.contains(point)`. Το `intersects` είναι πιο γενικό: περιλαμβάνει επαφή, επικάλυψη ή containment, όχι μόνο “μέσα”.
+
 ## Επόμενο βήμα
 
 Θα συγκρίνεις `left` και `inner` join types.

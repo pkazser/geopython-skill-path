@@ -26,6 +26,8 @@ overlay.to_file("gp10_results.gpkg", layer="landuse_protected", driver="GPKG")
 
 Το output διατηρεί land-use και protected attributes και περιέχει μόνο κοινές γεωμετρίες. Επιβεβαίωσε το με map ή άνοιγμα σε GIS.
 
+Η area της intersection για συγκεκριμένο input feature δεν μπορεί λογικά να είναι μεγαλύτερη από την original area, όταν συγκρίνουμε το ίδιο feature στο ίδιο projected CRS. Πρόσθεσε νέα area field και κράτησε το derived layer χωριστά από το source. Μετά το export ξαναδιάβασε το layer και έλεγξε CRS, rows, geometry, bounds και θετικά areas.
+
 ## Επόμενο βήμα
 
 Στο Mini Challenge θα συνδυάσεις clip και overlay.

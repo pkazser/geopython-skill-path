@@ -28,6 +28,15 @@
 
 Γράψε για κάθε ερώτημα ποιο εργαλείο επιλέγεις και τι περιμένεις να αλλάξει σε rows, geometry και attributes.
 
+| Operation | Βασικό ερώτημα | Rows | Attributes | Geometry |
+|---|---|---|---|---|
+| Attribute filter | ποια rows ικανοποιούν criterion; | συνήθως μειώνονται | του input | δεν αλλάζει |
+| Spatial join | ποια features σχετίζονται χωρικά; | μπορεί να αυξηθούν | μεταφέρονται | συνήθως του left |
+| Clip | ποιο τμήμα είναι μέσα στη mask; | μπορεί να μειωθούν | κυρίως του input | μπορεί να κοπεί |
+| Intersection/overlay | ποια κοινή geometry προκύπτει; | μπορεί να αυξηθούν | και από τα δύο | νέα geometry |
+
+Decision thinking: «σε ποιον δήμο βρίσκεται κάθε νοσοκομείο;» → spatial join. «Θέλω μόνο δρόμους μέσα στον δήμο» → clip. «Πόσα hectares land-use τέμνουν flood zone;» → intersection/overlay.
+
 ## Επόμενο βήμα
 
 Θα προετοιμάσεις σωστά τη mask study area.

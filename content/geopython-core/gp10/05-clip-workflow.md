@@ -25,6 +25,8 @@ clipped["area_m2"] = clipped.geometry.area
 
 Έλεγξε CRS, feature count, geometry type, validity, empties, bounds και `area_m2 > 0`. Το clipped area πρέπει να είναι μικρότερο ή ίσο με το αρχικό area για κάθε αντίστοιχο feature.
 
+Το before/after count δείχνει πόσα features συμμετείχαν, αλλά δεν αρκεί: σε Lines και Polygons πρέπει να ελέγξεις geometry type, validity, empty geometries, bounds και area/length όπου έχει νόημα. Το clipped dataset πρέπει να βρίσκεται μέσα ή πάνω στα bounds της study area και να διατηρεί τα attributes του input.
+
 ## Επόμενο βήμα
 
 Θα χρησιμοποιήσεις το clipped αποτέλεσμα στο overlay.

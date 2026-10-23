@@ -25,6 +25,8 @@ inner = gpd.sjoin(services, districts, how="inner", predicate="within")
 
 Σύγκρινε counts πριν/μετά, `isna().sum()` στα district fields και `geometry.geom_type`. Αν το inner έχει περισσότερα rows από τα services, ψάξε one-to-many σχέση.
 
+Η σύνταξη `gpd.sjoin(left, right, how=..., predicate=...)` έχει τρεις αποφάσεις: ποιο dataset είναι αριστερό, αν κρατάς όλα τα left features ή μόνο matches, και ποια χωρική σχέση ελέγχεις. Με `how="left"` βλέπεις και unmatched features, άρα είναι συχνά καλύτερο για QA. Με `how="inner"` κρατάς μόνο matches, άρα είναι χρήσιμο όταν θέλεις καθαρό analysis subset.
+
 ## Επόμενο βήμα
 
 Θα δεις γιατί ένα join μπορεί να αυξήσει τις γραμμές.

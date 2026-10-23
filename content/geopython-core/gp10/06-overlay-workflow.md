@@ -29,6 +29,8 @@ overlay["area_m2"] = overlay.geometry.area
 
 Το `how="intersection"` δεν είναι ίδιο με ένα spatial join. Εδώ οι geometries κόβονται και τα attributes συνδυάζονται.
 
+Σε overlay ένα input feature μπορεί να τέμνεται από πολλά features του άλλου layer και να δώσει πολλές output rows. Τα attributes και από τις δύο πλευρές μπορεί να έχουν παρόμοια names και να εμφανιστούν με suffixes. Μην υποθέσεις ότι το geometry type έμεινε ίδιο: έλεγξε `geom_type`, empty/invalid geometries και το νόημα κάθε output row.
+
 ## Επόμενο βήμα
 
 Θα εξετάσεις geometry προβλήματα που μπορεί να εμφανιστούν.
