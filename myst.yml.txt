@@ -1,0 +1,26 @@
+version: 1
+
+project:
+  title: GeoPython Skill Path
+  description: Practical Python learning path for Geoinformatics
+  keywords:
+    - Python
+    - GIS
+    - GeoPandas
+    - Geoinformatics
+    - GeoPython
+
+  toc:
+    - file: content/index.md
+
+    - file: content/start-here/index.md
+      title: Ξεκίνα από εδώ
+
+    - title: GeoPython Core
+      children:
+        - file: content/geopython-core/gp00/index.md
+          title: GP00 — Python από το μηδέν
+
+site:
+  template: book-theme
+  title: GeoPython Skill Path
