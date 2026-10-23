@@ -78,21 +78,14 @@ GeoPython
 Για να το χρησιμοποιήσεις χρειάζεσαι έναν λογαριασμό Google.
 
 ---
+## Άνοιξε το notebook στο Google Colab
 
-## Άνοιξε το Google Colab
+Μπορείς να δουλέψεις πάνω στο έτοιμο starter notebook χωρίς να εγκαταστήσεις τίποτα στον υπολογιστή σου.
 
-Πήγαινε στο:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pkazser/geopython-skill-path/blob/main/notebooks/starter/gp00_python_basics_starter.ipynb)
 
-https://colab.research.google.com
-
-και δημιούργησε ένα νέο notebook.
-
-Μπορείς να επιλέξεις:
-
-**File → New notebook**
-
-Θα εμφανιστεί ένα νέο κελί κώδικα.
-
+Το notebook ανοίγει σε δικό σου περιβάλλον Colab.  
+Οι αλλαγές που κάνεις εκεί δεν αλλάζουν το αρχικό αρχείο του repository.
 ---
 
 ## Το πρώτο σου πρόγραμμα
