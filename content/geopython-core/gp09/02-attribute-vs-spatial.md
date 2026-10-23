@@ -1,0 +1,29 @@
+# 2. Attribute join και spatial join
+
+## Τι θα μάθεις
+
+Θα ξεχωρίζεις σύνδεση με κοινό key από σύνδεση με γεωμετρική σχέση.
+
+## Έννοια
+
+Σε attribute join υπάρχει κοινή στήλη, όπως `district_id`. Σε spatial join το key προκύπτει από `within`, `contains` ή `intersects`.
+
+```python
+result = gpd.sjoin(points, polygons, predicate="within", how="left")
+```
+
+## Πρακτική στο dataset
+
+Οι υπηρεσίες δεν έχουν `district_id`, άρα το spatial join είναι ο κατάλληλος μηχανισμός. Μετά μπορείς να κάνεις κανονικό `groupby` στο αποτέλεσμα.
+
+## QA
+
+Έλεγξε ότι η geometry του service διατηρήθηκε ως `Point` και ότι τα district attributes εμφανίζονται. Μην περιμένεις να αλλάξει η geometry σε polygon: το join συνδέει πληροφορία, δεν κόβει geometry.
+
+## Checkpoint
+
+Ποιο join θα χρησιμοποιούσες αν το CSV είχε ήδη αξιόπιστο `district_id`; Attribute join.
+
+## Επόμενο βήμα
+
+Θα εξετάσεις τις έννοιες left/right και predicate.

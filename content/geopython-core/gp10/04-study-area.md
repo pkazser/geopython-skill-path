@@ -1,0 +1,30 @@
+# 4. Mask και περιοχή μελέτης
+
+## Τι θα μάθεις
+
+Θα ελέγξεις τη mask πριν την εφαρμόσεις.
+
+## Προετοιμασία
+
+```python
+study = gpd.read_file("data/gp10/study_area.geojson")
+study = study.to_crs("EPSG:2100")
+```
+
+Η mask είναι polygon που ορίζει την έκταση ανάλυσης. Πρέπει να έχει σωστό CRS, valid geometry και λογικά bounds.
+
+## Πρακτική / αναμενόμενο αποτέλεσμα
+
+Η study area έχει ένα polygon. Σύγκρινέ το οπτικά με landuse και protected zone: πρέπει να τέμνει και τα δύο.
+
+## QA
+
+Έλεγξε rows, `Polygon` geometry, `notna`, `not is_empty`, `is_valid`, bounds και EPSG:2100. Αν η mask είναι άδεια ή βρίσκεται αλλού, το clip θα δώσει παραπλανητικό κενό αποτέλεσμα.
+
+## Πρόσεξε
+
+Όλα τα layers που συμμετέχουν σε clip/overlay πρέπει να έχουν συμβατό CRS. Το `to_crs` απαιτεί σωστό αρχικό CRS.
+
+## Επόμενο βήμα
+
+Θα εφαρμόσεις clip στο land-use layer.

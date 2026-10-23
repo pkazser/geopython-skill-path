@@ -1,0 +1,30 @@
+# 3. Buffer γραμμών και polygons
+
+## Τι θα μάθεις
+
+Θα δημιουργείς buffer γύρω από δρόμο και θα κατανοήσεις τη διαφορά με point buffer.
+
+## Κώδικας
+
+```python
+road_buffer = roads_m.geometry.buffer(250)
+area_buffer = area_m.geometry.buffer(300)
+```
+
+Κάθε γραμμή γίνεται ζώνη γύρω από τον άξονά της. Το polygon μεγαλώνει εξωτερικά και εσωτερικά, άρα το νέο εμβαδόν συνήθως αυξάνεται.
+
+## Πρακτική
+
+Δημιούργησε 250 m buffers για τις δύο routes του `roads.geojson`. Έλεγξε ότι οι αρχικές geometries είναι `LineString` και τα αποτελέσματα `Polygon` ή `MultiPolygon`.
+
+## QA και λάθη
+
+Μην μετράς το buffer ως δρόμο: το buffer είναι ζώνη επιρροής. Έλεγξε rows, bounds και θετικό area. Αν δεις `Point` μετά το buffer, πιθανότατα αντικατέστησες λάθος στήλη ή χρησιμοποίησες λάθος layer.
+
+## Checkpoint
+
+Ποιο buffer θα επέλεγες για “περιοχή 300 m γύρω από πάρκο”; Polygon buffer. Για “ζώνη κατά μήκος δρόμου”; line buffer.
+
+## Επόμενο βήμα
+
+Θα συνδέσεις την απόσταση buffer με τις μονάδες του CRS.

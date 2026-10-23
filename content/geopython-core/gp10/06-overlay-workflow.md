@@ -1,0 +1,30 @@
+# 6. Workflow με overlay
+
+## Τι θα μάθεις
+
+Θα υπολογίσεις την κοινή έκταση land-use και protected zone.
+
+## Κώδικας
+
+```python
+overlay = gpd.overlay(clipped, protected, how="intersection")
+overlay["area_m2"] = overlay.geometry.area
+```
+
+Το output geometry είναι η πραγματική τομή. Τα attributes `landuse` και `zone_name` συνδυάζονται, ώστε να μπορείς να ομαδοποιήσεις την προστατευόμενη έκταση ανά χρήση γης.
+
+## Πρακτική / αναμενόμενο αποτέλεσμα
+
+Περίμενε τουλάχιστον ένα overlap με θετικό area. Οι γεωμετρίες μπορεί να είναι Polygon ή MultiPolygon.
+
+## QA
+
+Έλεγξε ότι overlay bounds περιέχονται στη study area, ότι όλα τα geometries είναι valid και ότι το συνολικό overlay area δεν ξεπερνά το clipped area.
+
+## Πρόσεξε
+
+Το `how="intersection"` δεν είναι ίδιο με ένα spatial join. Εδώ οι geometries κόβονται και τα attributes συνδυάζονται.
+
+## Επόμενο βήμα
+
+Θα εξετάσεις geometry προβλήματα που μπορεί να εμφανιστούν.

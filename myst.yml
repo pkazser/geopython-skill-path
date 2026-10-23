@@ -266,6 +266,81 @@ project:
             - file: content/geopython-core/gp07/10-summary.md
               title: 10. Readiness checkpoint
 
+        - title: GP08 — Buffer Analysis
+          children:
+            - file: content/geopython-core/gp08/index.md
+              title: Επισκόπηση GP08
+            - file: content/geopython-core/gp08/01-what-is-buffer.md
+              title: 1. Τι είναι buffer
+            - file: content/geopython-core/gp08/02-point-buffers.md
+              title: 2. Buffer γύρω από σημεία
+            - file: content/geopython-core/gp08/03-line-polygon-buffers.md
+              title: 3. Buffer γραμμών και polygons
+            - file: content/geopython-core/gp08/04-crs-and-units.md
+              title: 4. CRS και μονάδες
+            - file: content/geopython-core/gp08/05-distances-and-overlap.md
+              title: 5. Αποστάσεις και overlap
+            - file: content/geopython-core/gp08/06-select-within-buffer.md
+              title: 6. Επιλογή μέσα σε buffer
+            - file: content/geopython-core/gp08/07-dissolve-and-qa.md
+              title: 7. Dissolve και QA
+            - file: content/geopython-core/gp08/08-export-map.md
+              title: 8. Export και οπτικός έλεγχος
+            - file: content/geopython-core/gp08/09-mini-challenge.md
+              title: 9. Mini Challenge
+            - file: content/geopython-core/gp08/10-summary.md
+              title: 10. Readiness checkpoint
+
+        - title: GP09 — Spatial Join
+          children:
+            - file: content/geopython-core/gp09/index.md
+              title: Επισκόπηση GP09
+            - file: content/geopython-core/gp09/01-what-is-spatial-join.md
+              title: 1. Τι είναι spatial join
+            - file: content/geopython-core/gp09/02-attribute-vs-spatial.md
+              title: 2. Attribute join και spatial join
+            - file: content/geopython-core/gp09/03-left-right-predicate.md
+              title: 3. Left/right και predicates
+            - file: content/geopython-core/gp09/04-sjoin-types.md
+              title: 4. gpd.sjoin και join types
+            - file: content/geopython-core/gp09/05-one-to-many.md
+              title: 5. One-to-many και duplicates
+            - file: content/geopython-core/gp09/06-unmatched-and-crs.md
+              title: 6. Unmatched features και CRS
+            - file: content/geopython-core/gp09/07-aggregate.md
+              title: 7. Aggregation μετά το join
+            - file: content/geopython-core/gp09/08-qa-export-map.md
+              title: 8. QA, map και export
+            - file: content/geopython-core/gp09/09-mini-challenge.md
+              title: 9. Mini Challenge
+            - file: content/geopython-core/gp09/10-summary.md
+              title: 10. Readiness checkpoint
+
+        - title: GP10 — Clip / Intersection / Overlay
+          children:
+            - file: content/geopython-core/gp10/index.md
+              title: Επισκόπηση GP10
+            - file: content/geopython-core/gp10/01-what-is-clip.md
+              title: 1. Τι είναι clip
+            - file: content/geopython-core/gp10/02-intersection-overlay.md
+              title: 2. Intersection και overlay
+            - file: content/geopython-core/gp10/03-compare-tools.md
+              title: 3. Ποιο εργαλείο επιλέγω
+            - file: content/geopython-core/gp10/04-study-area.md
+              title: 4. Mask και περιοχή μελέτης
+            - file: content/geopython-core/gp10/05-clip-workflow.md
+              title: 5. Workflow με clip
+            - file: content/geopython-core/gp10/06-overlay-workflow.md
+              title: 6. Workflow με overlay
+            - file: content/geopython-core/gp10/07-geometry-qa.md
+              title: 7. Geometry QA
+            - file: content/geopython-core/gp10/08-area-export.md
+              title: 8. Area, map και export
+            - file: content/geopython-core/gp10/09-mini-challenge.md
+              title: 9. Mini Challenge
+            - file: content/geopython-core/gp10/10-summary.md
+              title: 10. Readiness checkpoint
+
 
 site:
   template: book-theme

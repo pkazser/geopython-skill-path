@@ -1,0 +1,29 @@
+# 1. Τι είναι spatial join
+
+## Τι θα μάθεις
+
+Θα καταλάβεις πώς ένα spatial join μεταφέρει attributes με βάση τη θέση.
+
+## Γιατί είναι χρήσιμο
+
+Ένα σημείο υπηρεσίας δεν έχει πάντα αποθηκευμένο τον διοικητικό τομέα. Μπορείς να τον βρεις επειδή το σημείο βρίσκεται μέσα σε polygon περιοχής.
+
+## Παράδειγμα
+
+```python
+joined = gpd.sjoin(services, districts, how="left", predicate="within")
+```
+
+Το `services` είναι το left dataset και διατηρεί τη geometry του. Από το `districts` έρχονται τα σχετικά attributes.
+
+## Εφαρμογή / QA
+
+Έλεγξε έξι services και τρεις districts πριν το join. Μετά μέτρα rows, null `district_id`, CRS και geometry type. Το service S06 πρέπει να είναι unmatched επειδή βρίσκεται εκτός των περιοχών.
+
+## Πρόσεξε
+
+Το ότι δεν εμφανίστηκε error δεν αποδεικνύει ότι το predicate ήταν σωστό.
+
+## Επόμενο βήμα
+
+Θα το συγκρίνεις με ένα κλασικό attribute join.
