@@ -191,6 +191,81 @@ project:
             - file: content/geopython-core/gp04/10-summary.md
               title: 10. Ανακεφαλαίωση
 
+        - title: GP05 — CRS Without Fear
+          children:
+            - file: content/geopython-core/gp05/index.md
+              title: Επισκόπηση GP05
+            - file: content/geopython-core/gp05/01-what-is-crs.md
+              title: 1. Τι είναι CRS
+            - file: content/geopython-core/gp05/02-geographic-projected.md
+              title: 2. Geographic και projected CRS
+            - file: content/geopython-core/gp05/03-epsg-codes.md
+              title: 3. EPSG codes
+            - file: content/geopython-core/gp05/04-set-crs.md
+              title: 4. set_crs
+            - file: content/geopython-core/gp05/05-to-crs.md
+              title: 5. to_crs
+            - file: content/geopython-core/gp05/06-units.md
+              title: 6. Μονάδες και bounds
+            - file: content/geopython-core/gp05/07-wrong-crs.md
+              title: 7. Λάθος CRS
+            - file: content/geopython-core/gp05/08-choose-crs.md
+              title: 8. Επιλογή CRS για μετρήσεις
+            - file: content/geopython-core/gp05/09-mini-challenge.md
+              title: 9. Mini Challenge
+            - file: content/geopython-core/gp05/10-summary.md
+              title: 10. Readiness checkpoint
+
+        - title: GP06 — Filtering
+          children:
+            - file: content/geopython-core/gp06/index.md
+              title: Επισκόπηση GP06
+            - file: content/geopython-core/gp06/01-why-filter.md
+              title: 1. Γιατί φιλτράρουμε
+            - file: content/geopython-core/gp06/02-boolean-conditions.md
+              title: 2. Boolean συνθήκες
+            - file: content/geopython-core/gp06/03-multiple-conditions.md
+              title: 3. Πολλές συνθήκες
+            - file: content/geopython-core/gp06/04-isin-strings.md
+              title: 4. isin και κείμενο
+            - file: content/geopython-core/gp06/05-numeric-ranges.md
+              title: 5. Αριθμητικά ranges
+            - file: content/geopython-core/gp06/06-missing-values.md
+              title: 6. Missing values
+            - file: content/geopython-core/gp06/07-geometry-aware-filter.md
+              title: 7. Geometry-aware filtering
+            - file: content/geopython-core/gp06/08-filter-qa.md
+              title: 8. QA μετά το filter
+            - file: content/geopython-core/gp06/09-mini-challenge.md
+              title: 9. Mini Challenge
+            - file: content/geopython-core/gp06/10-summary.md
+              title: 10. Readiness checkpoint
+
+        - title: GP07 — Measurements
+          children:
+            - file: content/geopython-core/gp07/index.md
+              title: Επισκόπηση GP07
+            - file: content/geopython-core/gp07/01-why-measure.md
+              title: 1. Γιατί μετράμε
+            - file: content/geopython-core/gp07/02-length.md
+              title: 2. Μήκος
+            - file: content/geopython-core/gp07/03-area.md
+              title: 3. Εμβαδόν
+            - file: content/geopython-core/gp07/04-distance.md
+              title: 4. Απόσταση
+            - file: content/geopython-core/gp07/05-units.md
+              title: 5. Μονάδες
+            - file: content/geopython-core/gp07/06-sanity-checks.md
+              title: 6. Sanity checks
+            - file: content/geopython-core/gp07/07-comparison.md
+              title: 7. Σύγκριση αποτελεσμάτων
+            - file: content/geopython-core/gp07/08-export-fields.md
+              title: 8. Export με measurement fields
+            - file: content/geopython-core/gp07/09-mini-challenge.md
+              title: 9. Mini Challenge
+            - file: content/geopython-core/gp07/10-summary.md
+              title: 10. Readiness checkpoint
+
 
 site:
   template: book-theme
