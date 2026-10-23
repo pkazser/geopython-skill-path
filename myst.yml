@@ -14,9 +14,12 @@ project:
     - file: content/geopython-core/index.md
       title: GeoPython Core
       children:
-        - file: content/geopython-core/gp00/index.md
-          title: GP00 — Python από το μηδέν
+
+        - title: GP00 — Python από το μηδέν
           children:
+            - file: content/geopython-core/gp00/index.md
+              title: Επισκόπηση GP00
+
             - file: content/geopython-core/gp00/01-python-colab.md
               title: 1. Python και Google Colab
 
@@ -46,6 +49,43 @@ project:
 
             - file: content/geopython-core/gp00/10-summary.md
               title: 10. Ανακεφαλαίωση
+
+
+        - title: GP01 — First GeoPython Workflow
+          children:
+            - file: content/geopython-core/gp01/index.md
+              title: Επισκόπηση GP01
+
+            - file: content/geopython-core/gp01/01-workflow.md
+              title: 1. Το πρώτο GeoPython Workflow
+
+            - file: content/geopython-core/gp01/02-load.md
+              title: 2. Φόρτωση δεδομένων
+
+            - file: content/geopython-core/gp01/03-inspect.md
+              title: 3. Έλεγχος δεδομένων
+
+            - file: content/geopython-core/gp01/04-understand.md
+              title: 4. Κατανόηση του dataset
+
+            - file: content/geopython-core/gp01/05-filter.md
+              title: 5. Filtering
+
+            - file: content/geopython-core/gp01/06-map.md
+              title: 6. Χαρτογράφηση
+
+            - file: content/geopython-core/gp01/07-validate.md
+              title: 7. Έλεγχος και επικύρωση
+
+            - file: content/geopython-core/gp01/08-export.md
+              title: 8. Εξαγωγή αποτελεσμάτων
+
+            - file: content/geopython-core/gp01/09-mini-challenge.md
+              title: 9. Mini Challenge
+
+            - file: content/geopython-core/gp01/10-summary.md
+              title: 10. Ανακεφαλαίωση
+
 
 site:
   template: book-theme

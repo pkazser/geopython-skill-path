@@ -1,5 +1,9 @@
 ﻿# 1. Python και Google Colab
 
+## Πρακτική άσκηση στο Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pkazser/geopython-skill-path/blob/main/notebooks/starter/gp00_python_basics_starter.ipynb)
+
 ## Τι θα μάθεις
 
 Σε αυτή την ενότητα θα μάθεις:
@@ -81,8 +85,6 @@ GeoPython
 ## Άνοιξε το notebook στο Google Colab
 
 Μπορείς να δουλέψεις πάνω στο έτοιμο starter notebook χωρίς να εγκαταστήσεις τίποτα στον υπολογιστή σου.
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pkazser/geopython-skill-path/blob/main/notebooks/starter/gp00_python_basics_starter.ipynb)
 
 Το notebook ανοίγει σε δικό σου περιβάλλον Colab.  
 Οι αλλαγές που κάνεις εκεί δεν αλλάζουν το αρχικό αρχείο του repository.
@@ -293,3 +295,7 @@ print(crs)
 Στην επόμενη ενότητα θα μάθουμε:
 
 **Μεταβλητές και τύπους δεδομένων**
+
+## Ενδεικτική λύση
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pkazser/geopython-skill-path/blob/main/notebooks/solution/gp00_python_basics_solution.ipynb)
