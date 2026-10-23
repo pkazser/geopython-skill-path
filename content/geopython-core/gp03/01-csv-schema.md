@@ -27,3 +27,21 @@ GIS feature
 ## Checkpoint
 
 Πριν συνεχίσεις, βρες ποια στήλη είναι μοναδικό ID και ποια πεδία θα χρησιμοποιήσεις για X και Y.
+
+## Γιατί είναι χρήσιμο
+
+Σε πραγματικό GIS workflow το schema είναι το συμβόλαιο ανάμεσα στην πηγή και στον κώδικα. Αν αλλάξει το όνομα `longitude` σε `lon`, ο κώδικας μπορεί να σταματήσει ή να χρησιμοποιήσει λάθος στήλη.
+
+## Πρακτική εκτέλεση
+
+```python
+required = {"asset_id", "asset_type", "condition", "longitude", "latitude"}
+assert required.issubset(df.columns)
+assert df["asset_id"].is_unique
+```
+
+Το `required.issubset()` ελέγχει ότι υπάρχουν όλα τα απαραίτητα πεδία. Έτσι αποτυγχάνουμε νωρίς, πριν δημιουργήσουμε geometry.
+
+## Αναμενόμενο αποτέλεσμα
+
+Το `city_assets.csv` έχει 8 rows, 5 στήλες και καθόλου missing values. Αυτή είναι η βάση για το επόμενο βήμα.

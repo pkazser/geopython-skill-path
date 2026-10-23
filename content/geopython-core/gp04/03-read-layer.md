@@ -23,3 +23,24 @@ print(parks.geometry.geom_type.value_counts())
 ## Επόμενο βήμα
 
 Θα εξετάσουμε το schema των attributes.
+
+## Γιατί είναι χρήσιμο
+
+Η ανάγνωση layer είναι η μετάβαση από «ένα αρχείο» σε συγκεκριμένα features. Κάθε επόμενος έλεγχος πρέπει να γίνεται στο layer που πραγματικά θα χρησιμοποιήσεις.
+
+## Πρακτική εκτέλεση
+
+```python
+parks = gpd.read_file(gpkg_path, layer="parks")
+print(parks.shape)
+print(parks.head(2))
+```
+
+Περιμένουμε 3 rows και geometry τύπου Polygon. Αν ο αριθμός ή ο τύπος διαφέρει, δεν συνεχίζουμε με assumptions.
+
+## QA check
+
+```python
+assert len(parks) == 3
+assert parks.geometry.notna().all()
+```

@@ -18,3 +18,17 @@
 ## Ερώτηση
 
 Γιατί οι QA checks για το `water_points` πρέπει να είναι διαφορετικοί από τους checks για το `parks`;
+
+## Αναμενόμενο αποτέλεσμα
+
+Το `water_points` έχει Point geometries και τρία features. Με το φίλτρο `active` πρέπει να παραμείνουν δύο σημεία. Ο χάρτης πρέπει να δείχνει τα ενεργά σημεία στην περιοχή των πάρκων.
+
+## QA checkpoint
+
+```python
+assert active_water.geometry.geom_type.eq("Point").all()
+assert active_water.crs.to_epsg() == 4326
+assert (active_water["status"] == "active").all()
+```
+
+Η άσκηση ολοκληρώνεται όταν μπορείς να εξηγήσεις γιατί χρησιμοποίησες Point checks και όχι Polygon checks.

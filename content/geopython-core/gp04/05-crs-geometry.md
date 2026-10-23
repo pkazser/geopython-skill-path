@@ -16,3 +16,21 @@ print("Invalid:", (~parks.geometry.is_valid).sum())
 ## GeoTip
 
 Το CRS του layer είναι κρίσιμο για τη σωστή θέση στον χάρτη και για μελλοντικές μετρήσεις.
+
+## Γιατί είναι χρήσιμο
+
+Κάθε layer μπορεί να έχει διαφορετικό CRS ή geometry type. Πριν κάνεις overlay ή κοινό χάρτη, πρέπει να ξέρεις αν τα layers μπορούν να συγκριθούν χωρικά.
+
+## Πρακτική εκτέλεση
+
+```python
+water = gpd.read_file(gpkg_path, layer="water_points")
+print("Parks:", parks.crs, parks.geometry.geom_type.unique())
+print("Water:", water.crs, water.geometry.geom_type.unique())
+```
+
+Στο dataset περιμένουμε και τα δύο layers σε `EPSG:4326`, αλλά με διαφορετικά geometry types.
+
+## Πρόσεξε
+
+Το `is_valid` δεν σημαίνει «είναι στη σωστή θέση». Συνδύασέ το με bounds και οπτικό έλεγχο.

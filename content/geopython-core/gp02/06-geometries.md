@@ -27,3 +27,28 @@ print(gdf.geometry.is_valid.all())
 ## Επόμενο βήμα
 
 Θα ενώσουμε τα βήματα σε ένα καθαρό workflow.
+
+## Γιατί είναι χρήσιμο
+
+Το `GeoDataFrame` είναι το σημείο όπου οι attribute τιμές συνδέονται με θέση. Ένα κενό ή invalid geometry σημαίνει ότι το feature δεν μπορεί να συμμετέχει αξιόπιστα σε χάρτη ή spatial operation.
+
+## Τι πρέπει να παρατηρήσεις
+
+```python
+print(gdf.geometry.geom_type.value_counts())
+print(gdf.total_bounds)
+```
+
+Περιμένουμε μόνο `Point` geometries και ένα μικρό χωρικό περίβλημα γύρω από τις Σέρρες. Αν δεις πολύ μακρινό bounds, επέστρεψε στον έλεγχο συντεταγμένων.
+
+## Πρόσεξε
+
+Το `is_valid` δεν ελέγχει αν το σημείο βρίσκεται στη σωστή χώρα. Ελέγχει αν η geometry είναι τεχνικά έγκυρη. Για τη λογική ορθότητα χρειαζόμαστε bounds, χάρτη και γνώση της περιοχής.
+
+## QA check
+
+```python
+assert gdf.geometry.notna().all()
+assert gdf.geometry.is_valid.all()
+assert gdf.geometry.geom_type.eq("Point").all()
+```

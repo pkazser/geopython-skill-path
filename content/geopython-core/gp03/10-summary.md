@@ -21,3 +21,13 @@ CSV → DataFrame → GeoDataFrame → CRS → QA → Export → Re-read
 - τι προσθέτει το GeoDataFrame σε σχέση με το DataFrame,
 - ποιοι έλεγχοι πρέπει να προηγούνται του export,
 - γιατί το GeoPackage μπορεί να περιέχει περισσότερα από ένα layers.
+
+## Τελικός αυτοέλεγχος
+
+```python
+assert gdf.crs.to_epsg() == 4326
+assert gdf.geometry.geom_type.eq("Point").all()
+assert gdf.geometry.is_valid.all()
+```
+
+Αν μπορείς να ξεκινήσεις από CSV, να εξηγήσεις το schema, να δημιουργήσεις geometry, να επιλέξεις σωστά CRS και να επαληθεύσεις δύο διαφορετικά formats, είσαι έτοιμος να εξερευνήσεις υπάρχον GeoPackage στο GP04.

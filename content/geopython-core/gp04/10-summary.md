@@ -21,3 +21,12 @@ Open → List layers → Read → Inspect → Filter → Validate → Export
 - γιατί κάθε layer χρειάζεται δικούς του geometry checks,
 - πώς επιβεβαιώνεις ότι ένα φίλτρο και ένα export είναι σωστά,
 - γιατί ο συνδυασμός αριθμητικού και οπτικού ελέγχου είναι χρήσιμος.
+
+## Τελικός αυτοέλεγχος
+
+```python
+layers = gpd.list_layers("data/gp04/serres_assets.gpkg")
+assert {"parks", "water_points"}.issubset(set(layers["name"]))
+```
+
+Αν μπορείς να εντοπίσεις layers, να διαβάσεις το σωστό layer, να καταλάβεις το schema, να ελέγξεις CRS/geometry/bounds και να αιτιολογήσεις το filtering, είσαι έτοιμος για επόμενη χωρική ανάλυση.

@@ -22,3 +22,21 @@ water.plot(ax=ax, color="blue")
 ## Επόμενο βήμα
 
 Θα φιλτράρουμε attributes χωρίς να χάσουμε τη geometry.
+
+## Γιατί είναι χρήσιμο
+
+Τα bounds είναι γρήγορος αριθμητικός έλεγχος χωρικής έκτασης. Ο χάρτης δείχνει αν τα layers ευθυγραμμίζονται και αν υπάρχει προφανές outlier.
+
+## Τι πρέπει να παρατηρήσεις
+
+Τα πάρκα και τα water points πρέπει να εμφανίζονται στην ίδια περιοχή. Αν τα σημεία είναι πολύ μακριά από τα polygons, έλεγξε CRS, σειρά longitude/latitude και το layer που διάβασες.
+
+## QA checkpoint
+
+```python
+assert parks.total_bounds.shape == (4,)
+assert water.total_bounds.shape == (4,)
+assert parks.crs == water.crs
+```
+
+Ο οπτικός έλεγχος δεν αντικαθιστά τα assertions, αλλά συχνά αποκαλύπτει λάθη που δεν φαίνονται από τις στήλες.

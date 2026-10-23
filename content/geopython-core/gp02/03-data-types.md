@@ -28,3 +28,29 @@ df.isna().sum()
 ## Checkpoint
 
 Έλεγξε ότι `longitude`, `latitude` και `elevation_m` είναι αριθμητικές στήλες πριν συνεχίσεις.
+
+## Γιατί είναι χρήσιμο
+
+Οι τύποι επηρεάζουν άμεσα τις συγκρίσεις. Η σύγκριση κειμένου με αριθμό μπορεί να αποτύχει ή να δώσει λάθος λογική. Το ίδιο πρόβλημα θα μεταφερθεί στη δημιουργία geometry και στο filtering.
+
+## Πρακτική εκτέλεση
+
+```python
+before = df["elevation_m"].dtype
+df["elevation_m"] = pd.to_numeric(df["elevation_m"], errors="coerce")
+after = df["elevation_m"].dtype
+print("Πριν:", before, "Μετά:", after)
+```
+
+Η τιμή `not_available` γίνεται `NaN`. Δεν τη μετατρέψαμε αυθαίρετα σε μηδέν· την κάναμε ορατό πρόβλημα για το επόμενο βήμα.
+
+## QA check
+
+```python
+for column in ["longitude", "latitude", "elevation_m"]:
+    assert pd.api.types.is_numeric_dtype(df[column])
+```
+
+## GeoTip
+
+Το `errors="coerce"` είναι χρήσιμο σε exploratory cleaning, αλλά σε παραγωγικό workflow πρέπει να καταγράφεις πόσες τιμές μετατράπηκαν σε `NaN`.

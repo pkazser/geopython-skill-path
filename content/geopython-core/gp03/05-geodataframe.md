@@ -24,3 +24,25 @@ assets = gdf[["asset_id", "asset_type", "condition", "geometry"]].copy()
 ## Checkpoint
 
 Έλεγξε ότι ο αριθμός των rows παραμένει ίδιος μετά την επιλογή στηλών.
+
+## Γιατί είναι χρήσιμο
+
+Το GeoDataFrame κρατά attribute table και geometry σε μία δομή. Αυτό επιτρέπει να φιλτράρεις με βάση το `condition` και ταυτόχρονα να χαρτογραφείς ακριβώς τις ίδιες γραμμές.
+
+## Πρακτική εκτέλεση
+
+```python
+assets = gdf[["asset_id", "asset_type", "condition", "geometry"]].copy()
+print(assets.shape)
+print(assets.geometry.name)
+```
+
+Η geometry column δεν πρέπει να χαθεί όταν επιλέγεις στήλες. Αν την αφαιρέσεις, το αποτέλεσμα ξαναγίνεται απλό DataFrame.
+
+## QA checkpoint
+
+```python
+assert len(assets) == len(gdf)
+assert assets.geometry.name == "geometry"
+assert assets.crs.to_epsg() == 4326
+```

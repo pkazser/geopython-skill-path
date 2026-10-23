@@ -28,3 +28,27 @@ assert clean["observation_id"].is_unique
 ## Επόμενο βήμα
 
 Θα ελέγξουμε αν οι συντεταγμένες βρίσκονται σε λογικά όρια.
+
+## Γιατί είναι χρήσιμο
+
+Τα διπλότυπα μπορούν να διπλασιάσουν counts, να επηρεάσουν summary statistics και να κάνουν ένα layer να φαίνεται πυκνότερο από την πραγματικότητα. Το μοναδικό ID είναι συχνά η καλύτερη άμυνα.
+
+## Πρακτική εκτέλεση
+
+```python
+duplicates = df[df["observation_id"].duplicated(keep=False)]
+print(duplicates[["observation_id", "category", "elevation_m"]])
+```
+
+Στο dataset θα δεις δύο ίδιες εγγραφές `O04`. Για το μάθημα κρατάμε την πρώτη, αλλά σε πραγματικό έργο θα ελέγχαμε timestamp, source και πληρότητα.
+
+## Πρόσεξε
+
+Μην χρησιμοποιείς `drop_duplicates()` χωρίς `subset`. Μπορεί να αφαιρέσει γραμμές που έχουν διαφορετικό ID αλλά τυχαία ίδιες τιμές σε άλλα πεδία.
+
+## QA check
+
+```python
+clean = clean.drop_duplicates("observation_id", keep="first")
+assert clean["observation_id"].is_unique
+```

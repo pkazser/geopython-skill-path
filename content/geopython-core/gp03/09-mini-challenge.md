@@ -18,3 +18,17 @@
 ## Readiness checkpoint
 
 Μπορείς να εξηγήσεις ποια είναι η διαφορά ανάμεσα στο αρχικό CSV και στο τελικό GIS dataset;
+
+## Αναμενόμενο αποτέλεσμα
+
+Το αποτέλεσμα `good` πρέπει να περιέχει μόνο features με `condition == "good"`, να διατηρεί τα IDs και τη geometry και να έχει το ίδιο CRS με το αρχικό GeoDataFrame.
+
+## QA checkpoint
+
+```python
+assert good.geometry.geom_type.eq("Point").all()
+assert good.crs.to_epsg() == 4326
+assert (good["condition"] == "good").all()
+```
+
+Η άσκηση ολοκληρώνεται όταν μπορείς να ανοίξεις το exported αρχείο ξανά και να εξηγήσεις πόσα features κράτησες.
