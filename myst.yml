@@ -341,6 +341,29 @@ project:
             - file: content/geopython-core/gp10/10-summary.md
               title: 10. Readiness checkpoint
 
+        - title: CORE CAPSTONE — Public Services Coverage
+          children:
+            - file: content/core-capstone/index.md
+              title: Επισκόπηση CORE CAPSTONE
+            - file: content/core-capstone/01-mission.md
+              title: 1. Mission
+            - file: content/core-capstone/02-data-audit.md
+              title: 2. Data audit
+            - file: content/core-capstone/03-clean-data.md
+              title: 3. Clean data
+            - file: content/core-capstone/04-spatial-framework.md
+              title: 4. Spatial framework
+            - file: content/core-capstone/05-explore.md
+              title: 5. Explore
+            - file: content/core-capstone/06-spatial-analysis.md
+              title: 6. Spatial analysis
+            - file: content/core-capstone/07-qa.md
+              title: 7. GeoPython QA
+            - file: content/core-capstone/08-deliverables.md
+              title: 8. Deliverables
+            - file: content/core-capstone/09-self-assessment.md
+              title: 9. Self-assessment
+
 
 site:
   template: book-theme
