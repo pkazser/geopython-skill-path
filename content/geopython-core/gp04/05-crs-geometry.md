@@ -4,6 +4,10 @@
 
 Θα ελέγξεις CRS, geometry types και valid geometries.
 
+## Τι πρόβλημα λύνουμε
+
+Πριν συνδυάσουμε parks και water points πρέπει να ξέρουμε αν μοιράζονται spatial reference και αν η geometry είναι κατάλληλη για το layer.
+
 ```python
 assert parks.crs is not None
 print(parks.geometry.geom_type.value_counts())
@@ -34,3 +38,7 @@ print("Water:", water.crs, water.geometry.geom_type.unique())
 ## Πρόσεξε
 
 Το `is_valid` δεν σημαίνει «είναι στη σωστή θέση». Συνδύασέ το με bounds και οπτικό έλεγχο.
+
+### Checkpoint
+
+Γράψε ξεχωριστά τι αποδεικνύουν `crs`, `geom_type`, `is_valid` και `total_bounds`. Αν δύο layers έχουν διαφορετικό CRS, κάνε τεκμηριωμένο `to_crs` πριν από spatial operation.

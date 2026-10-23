@@ -6,6 +6,10 @@
 
 ## Κώδικας
 
+## QA πριν και μετά
+
+Κατέγραψε rows και area πριν/μετά. Το clipped geometry πρέπει να βρίσκεται στη mask, να είναι valid/non-empty και να κρατά τα landuse attributes. Αν εξαφανιστούν όλα τα features, έλεγξε bounds και CRS.
+
 ```python
 clipped = gpd.clip(landuse, study)
 clipped["area_m2"] = clipped.geometry.area

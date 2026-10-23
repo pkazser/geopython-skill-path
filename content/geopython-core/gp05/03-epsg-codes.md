@@ -26,6 +26,10 @@ projected = gdf.to_crs(epsg=2100)
 
 Έλεγξε `assert gdf.crs.to_epsg() == 4326` και `assert projected.crs.to_epsg() == 2100`. Μην υποθέτεις ότι κάθε ελληνικό dataset έχει 2100· το CRS πρέπει να προκύπτει από τα metadata ή από τεκμηριωμένη απόφαση.
 
+## Checkpoint ερμηνείας
+
+Ο EPSG code περιγράφει CRS metadata, δεν αποδεικνύει ότι ο μετασχηματισμός έγινε. Σύγκρινε source/target CRS, rows, geometry types και bounds πριν θεωρήσεις επιτυχημένο το βήμα.
+
 ## Επόμενο βήμα
 
 Στο επόμενο lesson θα δηλώσεις το αρχικό CRS με `set_crs`.

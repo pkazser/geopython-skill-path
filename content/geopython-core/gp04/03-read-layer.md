@@ -4,6 +4,10 @@
 
 Θα διαβάσεις ένα συγκεκριμένο layer και θα πάρεις την πρώτη εικόνα του.
 
+## Τι πρόβλημα λύνουμε
+
+Μετά την ανακάλυψη θέλουμε να εργαστούμε σε συγκεκριμένο layer, όχι σε αόριστο αρχείο. Η επιλογή layer καθορίζει ποια schema και geometry θα αξιολογήσουμε.
+
 ```python
 parks = gpd.read_file(gpkg_path, layer="parks")
 print(parks.head())
@@ -19,6 +23,8 @@ print(parks.columns)
 print(parks.crs)
 print(parks.geometry.geom_type.value_counts())
 ```
+
+Πρόβλεψε τρία rows και Polygon geometry. Αν το output διαφέρει, σταμάτησε και έλεγξε ότι διάβασες το σωστό layer και όχι ότι “διορθώνεις” τον κώδικα για να ταιριάξει στην προσδοκία.
 
 ## Επόμενο βήμα
 

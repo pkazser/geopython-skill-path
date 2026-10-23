@@ -6,6 +6,10 @@
 
 ## Κώδικας
 
+## Ερμηνεία output
+
+Το αποτέλεσμα περιγράφει μόνο κοινή έκταση. Τα landuse και protected fields επιτρέπουν να απαντήσεις ποια χρήση τέμνει ποια ζώνη. Δεν πρέπει να το διαβάσεις ως πλήρες landuse layer.
+
 ```python
 overlay = gpd.overlay(clipped, protected, how="intersection")
 overlay["area_m2"] = overlay.geometry.area

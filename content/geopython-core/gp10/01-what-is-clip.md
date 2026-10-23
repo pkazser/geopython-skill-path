@@ -2,6 +2,10 @@
 
 ## Τι θα μάθεις
 
+## Νοητικό μοντέλο
+
+Το clip έχει input layer και mask. Αλλάζει τη geometry των input features, κρατά τα input attributes και περιορίζει το spatial extent. Δεν προσθέτει attributes από τη mask όπως ένα spatial join.
+
 Θα περιορίσεις ένα layer σε μια περιοχή μελέτης.
 
 ## Γιατί είναι χρήσιμο

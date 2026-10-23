@@ -4,6 +4,14 @@
 
 Το CSV είναι πίνακας τιμών. Για να γίνει GIS dataset χρειάζεται geometry και CRS.
 
+## Τι πρόβλημα λύνουμε
+
+Ένα CSV μπορεί να περιέχει coordinates αλλά δεν περιέχει ακόμη geometry ή CRS. Πριν το μετατρέψουμε, συμφωνούμε ποια πεδία είναι ταυτότητα, περιγραφή, longitude και latitude.
+
+## Νοητικό μοντέλο και QA
+
+Οι γραμμές είναι assets και οι στήλες η περιγραφή τους. Το GeoDataFrame θα προσθέσει geometry χωρίς να αφαιρέσει τα attributes. Έλεγξε `shape`, `dtypes`, missing values και μοναδικότητα `asset_id` πριν συνεχίσεις.
+
 ```python
 import pandas as pd
 

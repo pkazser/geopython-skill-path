@@ -4,6 +4,14 @@
 
 Το GeoPackage μπορεί να φιλοξενήσει πολλά layers σε ένα αρχείο.
 
+## Τι πρόβλημα λύνουμε
+
+Το GeoPackage είναι κατάλληλο για οργανωμένη GIS εργασία, επειδή κρατά layers, attributes και spatial metadata σε ένα container. Το `layer` ονομάζει ρητά το αποτέλεσμα.
+
+## QA και επιλογή format
+
+Ξαναδιάβασε το layer και έλεγξε rows, columns, geometry, CRS και bounds. GeoJSON προτιμάται για απλή ανταλλαγή ενός layer· GeoPackage όταν αναμένεις πολλαπλά layers ή επαναχρησιμοποίηση σε GIS project.
+
 ```python
 gpkg_path = output_dir / "city_assets.gpkg"
 gdf.to_file(gpkg_path, layer="assets", driver="GPKG")

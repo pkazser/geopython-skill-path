@@ -6,6 +6,10 @@
 
 ## Η αιτία
 
+## QA για duplicates
+
+Σύγκρινε `len(joined)`, `nunique` του left ID και πλήθος matches ανά ID. Αν το row count αυξηθεί, αυτό μπορεί να είναι σωστό one-to-many αποτέλεσμα· μην το κρύψεις με `drop_duplicates` χωρίς κανόνα.
+
 Αν ένα point βρίσκεται σε δύο overlapping polygons, έχει δύο matches. Αν ένα polygon περιέχει πολλά points, το ίδιο polygon attribute επαναλαμβάνεται πολλές φορές. Αυτό δεν είναι απαραίτητα duplicate λάθος· είναι η σχέση.
 
 ```python

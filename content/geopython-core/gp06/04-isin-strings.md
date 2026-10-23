@@ -6,6 +6,10 @@
 
 ## Παράδειγμα
 
+## Αναμενόμενο αποτέλεσμα
+
+Το `isin` κρατά μόνο τις επιτρεπτές κατηγορίες, ενώ το `str.contains` ψάχνει μοτίβο σε κείμενο. Έλεγξε `unique()` μετά το filter και κράτησε `na=False` όταν missing τιμές δεν πρέπει να θεωρηθούν match.
+
 ```python
 public = gdf[gdf["asset_type"].isin(["park", "school"])]
 review = gdf[gdf["condition"].str.contains("review", case=False, na=False)]

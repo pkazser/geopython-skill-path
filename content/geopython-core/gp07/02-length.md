@@ -6,6 +6,10 @@
 
 ## Κώδικας
 
+## Νοητικό μοντέλο
+
+Το `.length` αθροίζει τα τμήματα μιας LineString και επιστρέφει αριθμό στις μονάδες του CRS. Το νέο field είναι attribute της ίδιας geometry, όχι νέα γραμμή.
+
 ```python
 routes_m["length_m"] = routes_m.geometry.length
 routes_m["length_km"] = routes_m["length_m"] / 1_000

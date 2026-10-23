@@ -6,6 +6,10 @@
 
 ## Checklist
 
+## Γιατί χρειάζονται πολλοί έλεγχοι
+
+Το `is_valid` ελέγχει τεχνική εγκυρότητα, το `is_empty` αν υπάρχει πραγματική έκταση, το CRS τις μονάδες και το bounds τη θέση. Multipart geometry μπορεί να είναι απολύτως σωστή, αν ταιριάζει στο αποτέλεσμα της τομής.
+
 ```python
 assert frame.geometry.notna().all()
 assert frame.geometry.is_empty.sum() == 0

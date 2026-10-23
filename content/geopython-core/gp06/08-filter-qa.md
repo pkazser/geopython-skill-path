@@ -6,6 +6,10 @@
 
 ## Checklist
 
+## Τι αποδεικνύει το QA
+
+Οι assertions στις predicates ελέγχουν τη λογική, το CRS και οι geometry types τη δομή, τα rows την έκταση του subset και τα bounds τη χωρική λογική. Ένα count μόνο του δεν αποδεικνύει ότι επιλέχθηκαν τα σωστά features.
+
 Για το `selected` έλεγξε rows, CRS, geometry types, missing values και κάθε predicate:
 
 ```python

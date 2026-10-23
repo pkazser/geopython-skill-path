@@ -6,6 +6,10 @@
 
 ## Έλεγχος
 
+## Ερμηνεία unmatched
+
+Unmatched feature μπορεί να είναι εκτός περιοχής, λάθος coordinate ή feature που δεν καλύπτεται από το right layer. Το map και τα bounds βοηθούν να ξεχωρίσεις data gap από λάθος predicate.
+
 ```python
 unmatched = joined[joined["district_id"].isna()]
 ```

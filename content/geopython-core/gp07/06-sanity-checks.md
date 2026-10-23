@@ -6,6 +6,10 @@
 
 ## Checklist
 
+## Τι αποδεικνύουν
+
+Οι θετικές τιμές αποδεικνύουν ότι υπάρχει γεωμετρική έκταση/μήκος, αλλά όχι ότι η τάξη μεγέθους είναι σωστή. Συνδύασε CRS, bounds, rows, geometry type και γνώση της περιοχής.
+
 ```python
 assert areas_m["area_m2"].gt(0).all()
 assert routes_m["length_m"].gt(0).all()

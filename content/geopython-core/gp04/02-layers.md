@@ -4,6 +4,10 @@
 
 Θα εντοπίσεις τα διαθέσιμα layers του GeoPackage.
 
+## Τι πρόβλημα λύνουμε
+
+Πριν από `read_file` χρειάζεται κατάλογος περιεχομένων. Η ανακάλυψη layers αποφεύγει λάθος assumptions και επιτρέπει να σχεδιάσεις το επόμενο inspection workflow.
+
 ```python
 layers = gpd.list_layers(gpkg_path)
 print(layers)
@@ -41,3 +45,7 @@ print(layers["name"].tolist())
 ```python
 assert {"parks", "water_points"}.issubset(set(layers["name"]))
 ```
+
+## Αναμενόμενο αποτέλεσμα και ερμηνεία
+
+Το `parks` είναι Polygon layer και το `water_points` Point layer. Δεν αρκεί να δεις τα ονόματα· ο geometry type είναι ήδη χρήσιμη πληροφορία για τα επόμενα QA checks.

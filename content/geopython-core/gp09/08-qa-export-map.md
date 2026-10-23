@@ -2,6 +2,10 @@
 
 ## Τι θα μάθεις
 
+## Τελική λογική επικύρωση
+
+Το QA πρέπει να συμφωνεί με το ερώτημα: rows πριν/μετά, null matches, μοναδικά IDs, CRS, geometry retention, bounds και map. Η απουσία exception δεν αποδεικνύει σωστό spatial relationship.
+
 Θα ελέγχεις αν το spatial join είναι λογικά σωστό πριν το παραδώσεις.
 
 ## Checklist

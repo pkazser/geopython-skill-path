@@ -6,6 +6,10 @@
 
 ## Κώδικας
 
+## Τι αλλάζει στο αποτέλεσμα
+
+Το spatial join διατηρεί τα points και προσθέτει buffer attributes. Αν ένα point βρίσκεται σε δύο buffers, μπορεί να εμφανιστεί δύο φορές. Για μοναδικές υπηρεσίες χρησιμοποίησε `nunique`, όχι απλό row count.
+
 ```python
 near_school = gpd.sjoin(
     services_m,

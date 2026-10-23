@@ -6,6 +6,10 @@
 
 ## Παράδειγμα
 
+## Τι αλλάζει
+
+Το αρχικό Point αντικαθίσταται στο αντίγραφο από Polygon, ενώ το `service_id` μένει για ιχνηλασιμότητα. Γι’ αυτό κρατάμε χωριστά το source και το αποτέλεσμα.
+
 ```python
 schools = services_m[services_m["service_type"].eq("school")].copy()
 schools["geometry"] = schools.geometry.buffer(500)

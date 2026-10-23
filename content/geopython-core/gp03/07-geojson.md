@@ -4,6 +4,14 @@
 
 Θα αποθηκεύσεις το GeoDataFrame σε ένα φορητό γεωχωρικό format.
 
+## Τι πρόβλημα λύνουμε
+
+Το GeoJSON είναι χρήσιμο για ανταλλαγή ενός layer, αλλά το export μπορεί να αλλάξει types ή CRS representation. Για αυτό γράφουμε, ξαναδιαβάζουμε και συγκρίνουμε.
+
+## QA
+
+Σύγκρινε rows, βασικά columns, geometry types, CRS και bounds του `check` με το αρχικό `gdf`. Η απουσία exception δεν αρκεί για επιτυχημένο export.
+
 ```python
 from pathlib import Path
 

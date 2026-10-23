@@ -6,6 +6,10 @@
 
 ## Κώδικας
 
+## Τι παραδίδουμε
+
+Παραδίδουμε layer με τα αρχικά IDs/attributes, τα συνδυασμένα attributes, CRS και `area_m2`. Μετά το export ξαναδιαβάζουμε και συγκρίνουμε rows, columns, validity και area totals.
+
 ```python
 clipped["area_m2"] = clipped.geometry.area
 overlay["area_m2"] = overlay.geometry.area

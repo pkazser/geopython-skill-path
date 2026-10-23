@@ -10,6 +10,10 @@
 
 ## Παράδειγμα
 
+## Νοητικό μοντέλο
+
+Το φίλτρο δημιουργεί boolean mask και νέο subset· δεν διαγράφει το source. Πριν και μετά κράτησε rows, CRS και geometry type ώστε να ξέρεις τι άλλαξε και τι έμεινε ίδιο.
+
 ```python
 active = gdf[gdf["status"] == "active"]
 ```

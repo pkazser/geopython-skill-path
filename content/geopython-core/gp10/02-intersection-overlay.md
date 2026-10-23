@@ -2,6 +2,10 @@
 
 ## Τι θα μάθεις
 
+## Τι αλλάζει
+
+Το overlay δημιουργεί νέο layer με geometries τομής και attributes από τα δύο inputs. Το row count δεν χρειάζεται να ισούται με κανένα input, επειδή μία geometry μπορεί να κοπεί σε τμήματα.
+
 Θα καταλάβεις το `gpd.overlay(..., how="intersection")`.
 
 ## Έννοια

@@ -11,6 +11,10 @@ parks.plot(figsize=(7, 6), color="forestgreen", edgecolor="black")
 
 Τα bounds δείχνουν το συνολικό χωρικό περίβλημα. Ο χάρτης βοηθά να εντοπίσουμε geometry που βρίσκεται πολύ μακριά από τα υπόλοιπα features.
 
+## Νοητικό μοντέλο
+
+Τα bounds είναι τέσσερις αριθμοί `[minx, miny, maxx, maxy]`, όχι πλήρες outline. Είναι γρήγορο sanity check. Ο χάρτης δείχνει σχέσεις και outliers που δεν φαίνονται από μια στήλη.
+
 ## Σύγκριση layers
 
 ```python
@@ -40,3 +44,7 @@ assert parks.crs == water.crs
 ```
 
 Ο οπτικός έλεγχος δεν αντικαθιστά τα assertions, αλλά συχνά αποκαλύπτει λάθη που δεν φαίνονται από τις στήλες.
+
+### Checkpoint
+
+Πρόβλεψε ότι parks και water points πρέπει να ευθυγραμμίζονται. Αν όχι, έλεγξε πρώτα CRS και bounds πριν αλλάξεις geometry.

@@ -6,6 +6,10 @@
 
 ## Παράδειγμα
 
+## Τι αλλάζει
+
+Το `.area` επιστρέφει m² μόνο επειδή το layer μετασχηματίστηκε σε projected CRS με μέτρα. Το polygon παραμένει polygon, ενώ προστίθεται νέο attribute για αναφορά και export.
+
 ```python
 areas_m["area_m2"] = areas_m.geometry.area
 areas_m["area_ha"] = areas_m["area_m2"] / 10_000

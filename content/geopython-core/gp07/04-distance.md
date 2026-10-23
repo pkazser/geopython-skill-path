@@ -6,6 +6,10 @@
 
 ## Κώδικας
 
+## Πρόσεξε τη γεωμετρία
+
+Η `distance` συγκρίνει τις δύο geometries στο ίδιο CRS. Πριν καλέσεις τη μέθοδο, βεβαιώσου ότι τα points είναι non-empty και ότι source/target layers έχουν συμβατό CRS.
+
 ```python
 p01 = sites_m.geometry.iloc[0]
 p02 = sites_m.geometry.iloc[1]

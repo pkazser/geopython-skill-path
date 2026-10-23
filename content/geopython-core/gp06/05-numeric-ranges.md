@@ -6,6 +6,10 @@
 
 ## Παράδειγμα
 
+## Checkpoint ερμηνείας
+
+Το `between(75, 100)` περιλαμβάνει τα άκρα. Πριν συνδυάσεις το range με status ή geometry, έλεγξε min/max του source και count μετά από κάθε predicate. Ένα μηδενικό αποτέλεσμα μπορεί να είναι σωστό ή να δείχνει λάθος threshold.
+
 ```python
 good_scores = gdf[gdf["score"].between(75, 95)]
 ```

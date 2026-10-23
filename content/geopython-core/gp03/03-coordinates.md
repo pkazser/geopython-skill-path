@@ -4,6 +4,14 @@
 
 Θα μετατρέψεις τα δύο πεδία συντεταγμένων σε Points.
 
+## Τι πρόβλημα λύνουμε
+
+Μία αντιστροφή longitude/latitude δημιουργεί έγκυρη Python τιμή αλλά λάθος τοποθεσία. Το `points_from_xy(x, y)` δεν μαντεύει: longitude είναι X και latitude είναι Y.
+
+## QA checkpoint
+
+Έλεγξε numeric types, missing coordinates και γενικά όρια `-180..180` / `-90..90`. Για τοπικό dataset πρόσθεσε bounds και plot, επειδή τα γενικά όρια δεν επιβεβαιώνουν τη σωστή περιοχή.
+
 ```python
 import geopandas as gpd
 

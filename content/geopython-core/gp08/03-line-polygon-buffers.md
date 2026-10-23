@@ -6,6 +6,10 @@
 
 ## Κώδικας
 
+## Ερμηνεία
+
+Το line buffer αναπαριστά διάδρομο επιρροής και το polygon buffer ζώνη γύρω από υπάρχουσα έκταση. Το output δεν είναι η αρχική υποδομή, αλλά νέο analysis layer.
+
 ```python
 road_buffer = roads_m.geometry.buffer(250)
 area_buffer = area_m.geometry.buffer(300)

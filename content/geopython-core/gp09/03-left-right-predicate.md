@@ -6,6 +6,10 @@
 
 ## Οι ρόλοι
 
+## Πώς επιλέγω predicate
+
+`within` είναι φυσικό για points μέσα σε polygons. `contains` είναι η αντίστροφη διατύπωση όταν ελέγχεις polygon προς point. `intersects` είναι ευρύτερο και περιλαμβάνει επαφή ορίων. Η επιλογή πρέπει να περιγράφει το ερώτημα.
+
 Το left dataset είναι συνήθως τα features που θέλεις να μετρήσεις ή να κρατήσεις. Το right dataset παρέχει τα attributes. Με `within`, ένα point πρέπει να βρίσκεται μέσα σε polygon. Με `contains`, αντιστρέφεις τη λογική από την πλευρά του polygon. Με `intersects`, αρκεί να υπάρχει επαφή.
 
 ```python

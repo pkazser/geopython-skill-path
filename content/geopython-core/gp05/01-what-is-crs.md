@@ -24,6 +24,10 @@ gdf = gpd.GeoDataFrame(
 
 Εκτύπωσε `gdf.crs`, `len(gdf)`, `gdf.geom_type.value_counts()` και `gdf.total_bounds`. Περίμενε πέντε `Point` και bounds περίπου longitude 21–26, latitude 35–41. Αν δεν μπορείς να εξηγήσεις αυτά τα τέσσερα outputs, επανάλαβε την ανάγνωση πριν συνεχίσεις.
 
+## Τι αλλάζει στα δεδομένα
+
+Το CRS δεν αλλάζει μόνο το label ενός αριθμού. Καθορίζει πώς ερμηνεύεται όλη η geometry column. Το QA με rows, geometry types, bounds και CRS ελέγχει διαφορετικές υποθέσεις· κανένας έλεγχος μόνος του δεν αρκεί.
+
 ## Επόμενο βήμα
 
 Στο επόμενο lesson θα ξεχωρίσεις geographic από projected CRS.

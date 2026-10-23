@@ -6,6 +6,10 @@
 
 ## Export
 
+## Τι παραδίδουμε
+
+Το export πρέπει να περιλαμβάνει απόσταση, source ID, CRS και geometry. Μετά το write ξαναδιάβασε το layer, έλεγξε rows/geometry/CRS και κάνε plot για να επιβεβαιώσεις ότι η ζώνη βρίσκεται στη σωστή θέση.
+
 ```python
 school_buffers.to_file(
     "gp08_buffers.gpkg", layer="school_buffers", driver="GPKG"

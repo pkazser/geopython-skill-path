@@ -13,6 +13,14 @@ print(gdf.geometry.geom_type.unique())
 
 Το `GeoDataFrame` είναι DataFrame με μία ενεργή geometry column και CRS.
 
+## Τι πρόβλημα λύνουμε
+
+Θέλουμε ένα αντικείμενο που να μπορεί να φιλτραριστεί ως πίνακας και να χαρτογραφηθεί ως spatial layer. Κάθε row πρέπει να κρατά το `asset_id`, τα attributes και ένα Point.
+
+## Αναμενόμενο αποτέλεσμα και QA
+
+Έλεγξε ίδιο πλήθος rows με το αρχικό DataFrame, geometry type `Point`, μη κενές geometries, CRS και bounds. Αν λείπει geometry, επέστρεψε στις coordinates αντί να κάνεις export μισού layer.
+
 ## Επιλογή πεδίων
 
 ```python

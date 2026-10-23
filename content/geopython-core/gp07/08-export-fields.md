@@ -6,6 +6,10 @@
 
 ## Κώδικας
 
+## Τι παραδίδουμε
+
+Το export πρέπει να κρατά IDs, αρχικά attributes, geometry, CRS και νέα fields. Μετά το write ξαναδιάβασε το layer και έλεγξε rows, columns, units και positive values.
+
 ```python
 areas_m.to_file("gp07_measurements.gpkg", layer="areas", driver="GPKG")
 routes_m.to_file("gp07_measurements.gpkg", layer="routes", driver="GPKG")
